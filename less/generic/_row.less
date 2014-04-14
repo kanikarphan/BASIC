@@ -1,0 +1,38 @@
+// Name:         Row
+// Description:  
+//
+// Components:   `row`
+//               `row-mian`
+//
+// Modifier:     `row--center`
+//
+
+.use-row(@use-row);
+
+.use-row(@row) when (@row = false) {}
+
+.use-row(@row) when (@row = true) {
+
+.row {
+  &:extend(.clearfix all);
+  max-width: @row-max-width;
+  padding: 0 @row-padding;
+}
+
+/* Large screen and bigger */
+@media (min-width: @bp-huge) {
+
+  .row {
+    max-width: @row-max-width-large;
+    padding: 0 @row-padding-large;
+  }
+
+}
+
+// Center row
+.row--center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+} // end if

@@ -1,0 +1,25 @@
+// Name:         Brand
+// Description:  Simple way to apply your brand face and/or color to any element
+//
+// Components:   `brand-`
+//
+// Modifier:     `brand--face`
+//               `brand--color`
+//
+
+@if $use-brand == true {
+
+.brand {
+  color: $brand-color;
+  font-family: $brand-face;
+}
+
+.brand--face {
+  font-family: $brand-face;
+}
+
+.brand--color {
+  color: $brand-color;
+}
+
+} // end if

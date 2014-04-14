@@ -1,0 +1,27 @@
+// Name:         Font
+// Description:  Webfonts files name needs to have `-webfont` suffix because we're using Font Squirrel webfont generator.
+//
+// Components:   
+//
+// Modifier:
+//
+
+.use-font(@use-font);
+
+.use-font(@font) when (@font = false) {}
+
+.use-font(@font) when (@font = true) {
+
+@font-face {
+  .webfont('Basic Icons', 'Basic-Icons-webfont');
+}
+
+@font-face {
+  .webfont('OpenSans Light', 'OpenSans-Light-webfont');
+}
+
+@font-face {
+  .webfont('OpenSans Semibold', 'OpenSans-Semibold-webfont');
+}
+
+} // end if

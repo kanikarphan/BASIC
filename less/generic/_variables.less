@@ -1,0 +1,237 @@
+// Name:         Variables
+// Description:  Defines values as variables to allow for reusability and consistency
+//
+// Component:
+//
+// Modifier:
+//
+
+// Global variables
+
+// Optional abstractions and objects
+
+@use-align:                            true;
+@use-brand:                            true;
+@use-column:                           true;
+@use-float:                            true;
+@use-font:                             true;
+@use-image:                            true;
+@use-margin:                           true;
+@use-padding:                          true;
+@use-text:                             true;
+@use-visibility:                       true;
+@use-button:                           true;
+@use-caption:                          true;
+@use-form:                             true;
+@use-heading:                          true;
+@use-icons:                            true;
+@use-list:                             true;
+@use-media:                            true;
+@use-modal:                            true;
+@use-progress:                         true;
+@use-row:                              true;
+@use-table:                            true;
+@use-print:                            true;
+
+// Base
+
+@base-unitless:                        unit(@base-font-size);
+@base-font-size:                       16px;
+@base-line-height:                     24px;
+@base-spacing-unit:                    30px;
+@base-spacing-unit-half:               @base-spacing-unit / 2;
+@base-spacing-unit-small:              10px;
+@base-line-height-ratio:               @base-line-height / @base-font-size;
+@base-img-path:                        '../img';
+@base-font-path:                       '../fonts';
+@base-font-openSans-light:             'OpenSans Light'; // placeholder for a webfont
+@base-font-openSans-semibold:          'OpenSans Semibold'; // placeholder for a webfont
+@base-font-icons:                      'Basic Icons';
+@base-font-family:                     @base-font-openSans-light;
+@base-font-sans:                       'Helvetica Neue', Helvetica, Arial, sans-serif;
+@base-font-bold:                       @base-font-openSans-semibold;
+@base-alpha-color:                     #74badd;
+@base-beta-color:                      #5bcf80;
+@base-gamma-color:                     #f8cb30;
+@base-delta-color:                     #e25e5b;
+@base-ui-color:                        #ddd; // default color for object, borders, & etc.
+@base-text-color:                      #222; // default color for text.
+@base-body-font-family:                @base-font-family, @base-font-sans;
+@base-body-font-size:                  @base-font-size;
+@base-body-background:                 #fafafa;
+@base-body-font-weight:                normal;
+@base-body-color:                      @base-text-color;
+@base-link-color:                      #74badd;
+@base-link-text-decoration:            none;
+@base-link-hover-color:                #059;
+@base-link-hover-text-decoration:      none;
+@base-em-color:                        #d05;
+@base-ins-background:                  #ffa;
+@base-ins-color:                       @base-text-color;
+@base-mark-background:                 #ffa;
+@base-mark-color:                      @base-text-color;
+@base-selection-background:            @base-alpha-color;
+@base-selection-color:                 #fff;
+@base-hr-color:                        @base-ui-color;
+@base-hr-border-width:                 1px;
+@base-blockquote-color:                @base-ui-color;
+@base-blockquote-border-width:         5px;
+@base-blockquote-small-color:          @base-ui-color;
+@base-blockquote-font-size:            @base-font-size;
+@base-code-color:                      #666;
+@base-code-font-size:                  12px;
+@base-code-font-family:                Consolas, monospace, serif;
+@base-pre-padding:                     10px;
+@base-pre-background:                  @base-ui-color;
+@base-pre-color:                       @base-text-color;
+@base-pre-font-size:                   12px;
+
+// Brand identity
+
+@brand-color:                          @base-alpha-color;
+@brand-face:                           @base-font-family, @base-font-sans;
+@brand-border-radius:                  4px;
+
+// Breakpoints
+
+@palm:                                 480px;
+@lap:                                  768px;
+@desk:                                 992px;
+@huge:                                 1200px;
+@bp-palm:                              (unit(@palm) / @base-unitless * 1em);
+@bp-lap:                               (unit(@lap) / @base-unitless * 1em);
+@bp-desk:                              (unit(@desk) / @base-unitless * 1em);
+@bp-huge:                              (unit(@huge) / @base-unitless * 1em);
+@bp-tiny-max:                          (unit(@palm - 1px) / @base-unitless * 1em);
+@bp-palm-max:                          (unit(@lap - 1px) / @base-unitless * 1em);
+@bp-lap-max:                           (unit(@desk - 1px) / @base-unitless * 1em);
+@bp-desk-max:                          (unit(@huge - 1px) / @base-unitless * 1em);
+
+// Column
+
+@column-spacing-small:                 @base-spacing-unit-small;
+@column-spacing:                       @base-spacing-unit-half;
+@column-spacing-large:                 @base-spacing-unit;
+@column-gutter-small:                  @column-spacing-small;
+@column-gutter:                        @column-spacing;
+@column-gutter-large:                  @column-spacing-large;
+@column-divider-color:                 @base-ui-color;
+@column-divider-border-width:          1px;
+
+// Cubic bezier transitions
+
+@cubic-bezier-ease:                    cubic-bezier(0.25, 0.1, 0.25, 1);
+@cubic-bezier-linear:                  cubic-bezier(0, 0, 1, 1);
+@cubic-bezier-ease-in:                 cubic-bezier(0.42, 0, 1, 1);
+@cubic-bezier-ease-out:                cubic-bezier(0, 0, 0.58, 1);
+@cubic-bezier-ease-in-out:             cubic-bezier(0.42, 0, 0.58, 1);
+
+// Font sizes
+
+@font-giga-size:                       96px;
+@font-mega-size:                       72px;
+@font-kilo-size:                       48px;
+@font-milli-size:                      14px;
+@font-micro-size:                      12px;
+@font-nano-size:                       10px;
+@font-pico-size:                       8px;
+
+// Image
+@image-border-spacing:                 4px;
+@image-border-color:                   #e5e5e5;
+@image-border-hover-color:             #b2b2b2;
+
+// Margin
+
+@margin-spacing:                       @base-spacing-unit-half;
+@margin-spacing-large:                 @base-spacing-unit;
+@margin-spacing-small:                 @base-spacing-unit-small;
+
+// Objects variables
+
+// Button
+
+@button-spacing:                       14px;
+@button-large-spacing:                 20px;
+@button-small-spacing:                 10px;
+@button-border-width:                  2px;
+
+// caption
+
+@caption-color:                        #fff;
+@caption-background:                   rgba(0, 0, 0, 0.3);
+@caption-spacing:                      @base-spacing-unit-half;
+
+// Form
+
+@label-spacing:                        @base-spacing-unit-small;
+@input-spacing:                        @base-spacing-unit;
+@input-radio-spacing:                  60%;
+@input-border-width:                   1px;
+
+// Heading
+
+@heading-font-family:                  @base-font-bold, @base-font-sans;
+@heading-font-weight:                  500;
+@heading-color:                        @base-text-color;
+@heading-small-color:                  #999;
+@heading-text-transform:               none;
+@heading-margin-top:                   25px;
+@h1-font-size:                         36px; // alpha
+@h2-font-size:                         30px; // beta
+@h3-font-size:                         24px; // gamma
+@h4-font-size:                         20px; // delta
+@h5-font-size:                         16px; // epsilon
+@h6-font-size:                         14px; // zeta
+
+// List
+
+@list-spacing:                         5px;
+@list-line-border:                     @base-ui-color;
+@list-line-border-width:               1px;
+@list-striped-background:              #f5f5f5;
+@list-disc-offset:                     180px;
+
+// Media 
+
+@media-padding:                        4px;
+@media-border:                         @base-ui-color;
+@media-border-width:                   1px;
+@media-background:                     #fff;
+@media-hover-border:                   #aaa;
+@media-hover-background:               #fff;
+
+@media-caption-padding:                @media-padding;
+@media-caption-color:                  #444;
+
+@media-tiny-width:                     150px;
+@media-small-width:                    200px;
+@media-medium-width:                   300px;
+@media-large-width:                    400px;
+
+// Modal
+
+@modal-background:                     rgba(0, 0, 0, 0.8);
+@modal-z-index:                        10;
+@modal-header-border-width:            1px;
+@modal-footer-border-width:            1px;
+
+// Progress
+
+@progress-spacing-small:               20px;
+@progress-spacing:                     30px;
+@progress-spacing-large:               40px;
+
+// Row
+
+@row-max-width:                        980px;
+@row-padding:                          @column-spacing;
+@row-max-width-large:                  1200px;
+@row-padding-large:                    @column-spacing-large;
+
+// Table 
+
+@table-background-color:               #f5f5f5;
+@table-border-width:                   1px;
+@table-responsive-tr-spacing:          @base-spacing-unit-half;
+@table-responsive-td-spacing:          @base-spacing-unit-small;

@@ -1,0 +1,114 @@
+// Name:         Button
+// Description:  Defines styles for button
+//
+// Components:   `button`
+//
+// Modifier:     `button--big`
+//               `button--small`
+//               `button--alpha`
+//               `button--beta`
+//               `button--gamma`
+//               `button--delta`
+//               `button--disabled`
+//
+
+@if $use-button == true {
+
+.button {
+  @include transition(all 0.2s $cubic-bezier-ease-in);
+  background-color: #fff;
+  border: $button-border-width solid $base-ui-color;
+  border-radius: $brand-border-radius;
+  color: $base-text-color;
+  display: inline-block;
+  font-family: $base-font-bold;
+  padding: rem($button-spacing - 5) rem($button-spacing);
+  text-transform: uppercase;
+
+  &:hover {
+    @include box-shadow(inset 0 0 rem(10px) $base-alpha-color);
+    background-color: $base-alpha-color;
+    border-color: $base-alpha-color;
+    color: #fff;
+  }
+}
+
+.button--big {
+  @include font-size(24px);
+  padding: rem($button-large-spacing - 5) rem($button-large-spacing);
+  text-transform: uppercase;
+}
+
+.button--small {
+  @include font-size(18px);
+  padding: rem($button-small-spacing - 5) rem($button-small-spacing);
+}
+
+.button--alpha {
+  background-color: $base-alpha-color;
+  border-color: $base-alpha-color;
+  color: #fff;
+
+  &:hover {
+    @include box-shadow(inset 0 0 rem(10px) $base-alpha-color);
+    background-color: darken($base-alpha-color, 8%);
+    border-color: $base-alpha-color;
+    color: #fff;
+  }
+}
+
+.button--beta {
+  background-color: $base-beta-color;
+  border-color: $base-beta-color;
+  color: #fff;
+
+  &:hover {
+    @include box-shadow(inset 0 0 rem(10px) $base-beta-color);
+    background-color: darken($base-beta-color, 8%);
+    border-color: $base-beta-color;
+    color: #fff;
+  }
+}
+
+.button--gamma {
+  background-color: $base-gamma-color;
+  border-color: $base-gamma-color;
+  color: #fff;
+
+  &:hover {
+    @include box-shadow(inset 0 0 rem(10px) $base-gamma-color);
+    background-color: darken($base-gamma-color, 8%);
+    border-color: $base-gamma-color;
+    color: #fff;
+  }
+}
+
+.button--delta {
+  background-color: $base-delta-color;
+  border-color: $base-delta-color;
+  color: #fff;
+  
+  &:hover {
+    @include box-shadow(inset 0 0 rem(10px) $base-delta-color);
+    background-color: darken($base-delta-color, 8%);
+    border-color: $base-delta-color;
+    color: #fff;
+  }
+}
+
+.button--disabled {
+  @include box-shadow(inset 0 0 rem(10px) $base-ui-color);
+  background-color: $base-ui-color;
+  border-color: $base-ui-color;
+  color: #fff;
+  cursor: pointer;
+  pointer-events: none;
+  
+  &:hover {
+    @include box-shadow(none);
+    background-color: $base-ui-color;
+    border-color: $base-ui-color;
+  }
+}
+
+} // end if

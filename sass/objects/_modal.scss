@@ -1,0 +1,129 @@
+// Name:         Button
+// Description:  Defines styles for modal
+//
+// Components:   `modal`
+//
+// Modifier:     `modal--fade`
+//
+//
+
+@if $use-modal == true {
+
+.modal-overlay {
+  background-color: $modal-background;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  visibility: hidden;
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+    z-index: $modal-z-index;
+
+    > .modal .modal__content {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.modal {
+  @include ghost-vertical-align;
+  height: 100%;
+  text-align: center;
+
+  &:before {
+    margin-left: rem(-2px);
+  }
+}
+
+.modal__content {
+  background-color: #fff;
+  border-radius: $brand-border-radius;
+  display: inline-block;
+  opacity: 0;
+  text-align: left;
+  vertical-align: middle;
+  visibility: hidden;
+  width: 90%;
+}
+
+.modal__header,
+.modal__footer {
+  background-color: $base-ui-color;
+  padding: rem(12px) rem(12px);
+  position: relative;
+
+  @media (min-width: $bp-lap) {
+    padding: rem(18px) rem(32px);
+  }
+}
+
+.modal__header {
+  border-bottom: $modal-header-border-width solid $base-ui-color;
+  border-radius: $brand-border-radius $brand-border-radius 0 0;
+}
+
+.modal__footer {
+  border-radius: 0 0 $brand-border-radius $brand-border-radius;
+}
+
+.modal_title {
+  margin-bottom: 0;
+}
+
+.modal__body {
+  height: rem(300px);
+  overflow-y: auto;
+  padding: rem(12px) rem(12px);
+
+  @media (min-width: $bp-lap) {
+    height: rem(200px);
+    padding: rem(18px) rem(32px);
+  }
+}
+
+.modal__footer {
+  border-top: $modal-footer-border-width solid $base-ui-color;
+}
+
+.modal--fade {
+  .modal__content {
+    @include transition(opacity 0.3s $cubic-bezier-ease-in);
+  }
+}
+
+.modal--scale {
+  &:target {
+    > .modal .modal__content {
+      @include scale(1);
+    }
+  }
+
+  .modal__content {
+    @include scale(0.25);
+    @include transition(-webkit-transform 0.3s $cubic-bezier-ease-in-out);
+    @include transition(transform 0.3s $cubic-bezier-ease-in-out);
+  }
+}
+
+.modal--slide {
+  &:target {
+    > .modal .modal__content {
+      top: 0;
+      position: relative;
+    }
+  }
+
+  .modal__content {
+    @include transition(top 0.3s $cubic-bezier-ease-out);
+    top: -50%;
+    position: absolute;
+  }
+}
+
+} // end if

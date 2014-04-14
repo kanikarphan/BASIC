@@ -1,0 +1,26 @@
+// Name:         Image
+// Description:  Class to manipulate `img`
+//
+// Components: 
+//
+// Modifier:     `img--rounded`
+//               `img--circle`
+//
+
+.use-image(@use-image);
+
+.use-image(@image) when (@image = false) {}
+
+.use-image(@image) when (@image = true) {
+
+// rounded corners images
+.img--rounded {
+  border-radius: @brand-border-radius;
+}
+
+// perfect circle images
+.img--circle {
+  border-radius:  50%; // crank the border-radius so it works with most reasonably sized images
+}
+
+} // end if

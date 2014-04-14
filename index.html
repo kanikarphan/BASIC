@@ -1,0 +1,2084 @@
+<!DOCTYPE html>
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js ie ie7 lt-ie8 lt-ie9" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js ie ie8 lt-ie9" lang="en"><![endif]-->
+<!--[if (IE 9)&!(IEMobile)]><html class="no-js ie ie9" lang="en"><![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Basic</title>
+  <meta name="description" content="">
+  <meta name="author" content="Kanikar Phan">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  <link rel="stylesheet" href="css/basic.css">
+
+  <!-- For Demonstration Purposes Only -->
+  <style>
+    .column__width { width: 200px; }
+    .heading .panel { min-height: 68px; }
+    .panel { padding: 10px; text-align: center; }
+    :nth-child(8n-7) > .panel { background: rgba(0,0,0,0.1); }
+    :nth-child(8n-6) > .panel { background: rgba(0,0,0,0.15); }
+    :nth-child(8n-5) > .panel { background: rgba(0,0,0,0.2); }
+    :nth-child(8n-4) > .panel { background: rgba(0,0,0,0.25); }
+    :nth-child(8n-3) > .panel { background: rgba(0,0,0,0.3); }
+    :nth-child(8n-2) > .panel { background: rgba(0,0,0,0.35); }
+    :nth-child(8n-1) > .panel { background: rgba(0,0,0,0.40); }
+    :nth-child(8n) > .panel { background: rgba(0,0,0,0.45); }
+    .column__equal > * { background: rgba(0,0,0,0.10); }
+    .progress-width--alpha { width: 40%; }
+    .progress-width--beta { width: 20%; }
+    .progress-width--gamma { width: 90%; }
+    .progress-width--delta { width: 60%; }
+  </style>
+</head>
+<body>
+  <div class="row row--center">
+
+    <h2>Headings</h2>
+
+    <p>Includes styling for h1 through h6 headings.</p>
+
+    <h1>H1</h1>
+    <h2>H2</h2>
+    <h3>H3</h3>
+    <h4>H4</h4>
+    <h5>H5</h5>
+    <h6>H6</h6>
+
+    <p>Headings sizes can be applied to any element by using the coresponding class</p>
+
+    <ul class="column heading column-even--1-2 column-even--palm-1-3 column-even--lap-1-4 column-even--desk-1-5 column-even--huge-1-6">
+      <li class="heading--alpha"><div class="panel">H1<div></li>
+      <li class="heading--beta"><div class="panel">H2<div></li>
+      <li class="heading--gamma"><div class="panel">H3<div></li>
+      <li class="heading--delta"><div class="panel">H4<div></li>
+      <li class="heading--epsilon"><div class="panel">H5<div></li>
+      <li class="heading--zeta"><div class="panel">H6<div></li>
+    </ul>
+
+    <h2>Text</h2>
+
+    <div class="column">
+      <p class="column__1-1">
+        <span class="text--giga">Giga</span>
+        <span class="text--mega">Mega</span>
+        <span class="text--kilo">Kilo</span>
+        <span class="text--lead">Lead</span>
+        <span class="text--milli">Milli</span>
+        <span class="text--micro">Micro</span>
+        <span class="text--nano">Nano</span>
+        <span class="text--pico">Pico</span>
+      </p>
+    </div>
+
+    <h2>Button</h2>
+
+    <div class="column">
+      <div class="column__1-1">
+        <button class="button" type="button">Button</button>
+        <button class="button button--small" type="button">Small</button>
+        <button class="button button--big" type="button">Big</button>
+        <button class="button button--alpha" type="button">Alpha</button>
+        <button class="button button--beta" type="button">Beta</button>
+        <button class="button button--gamma" type="button">Gamma</button>
+        <button class="button button--delta" type="button">Delta</button>
+        <button class="button button--disabled" type="button">Disabled</button>
+      </div>
+    </div>
+
+    <h2>Modal</h2>
+
+    <div class="column">
+      <div class="column__1-1">
+
+        <a href="#default"class="button">Default</a>
+
+        <div id="default" class="modal-overlay">
+          <div class="modal">
+            <div class="modal__content">
+              <header class="modal__header">
+                <h3 class="modal_title">Some text</h3>
+              </header>
+              <section class="modal__body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.</p>
+              </section>
+              <footer class="modal__footer">
+                <a class="button button--small" href="#!">Close</a>
+              </footer>
+            </div>
+          </div>
+        </div>
+
+        <a href="#fade"class="button">Fade</a>
+
+        <div id="fade" class="modal-overlay modal--fade">
+          <div class="modal">
+            <div class="modal__content">
+              <header class="modal__header">
+                <h3 class="modal_title">Some text</h3>
+              </header>
+              <section class="modal__body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.</p>
+              </section>
+              <footer class="modal__footer">
+                <a class="button button--small" href="#!">Close</a>
+              </footer>
+            </div>
+          </div>
+        </div>
+
+        <a href="#scale"class="button">Scale</a>
+
+        <div id="scale" class="modal-overlay modal--scale">
+          <div class="modal">
+            <div class="modal__content">
+              <header class="modal__header">
+                <h3 class="modal_title">Some text</h3>
+              </header>
+              <section class="modal__body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.</p>
+              </section>
+              <footer class="modal__footer">
+                <a class="button button--small" href="#!">Close</a>
+              </footer>
+            </div>
+          </div>
+        </div>
+
+        <a href="#slide"class="button">Slide</a>
+
+        <div id="slide" class="modal-overlay modal--slide">
+          <div class="modal">
+            <div class="modal__content">
+              <header class="modal__header">
+                <h3 class="modal_title">Some text</h3>
+              </header>
+              <section class="modal__body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.</p>
+              </section>
+              <footer class="modal__footer">
+                <a class="button button--small" href="#!">Close</a>
+              </footer>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <h2>Column</h2>
+
+    <div class="clearfix">
+      <div class="float--left">Float Test</div>
+    </div>
+
+    <div class="column">
+      <div class="column__lap-1-2"><div class="panel">LAP-1-2</div></div>
+      <div class="column__lap-1-2 separate--top flush-lap--top"><div class="panel">LAP-1-2</div></div>
+    </div>
+
+    <div class="column">
+      <div class="column__1-2"><div class="panel">1-2</div></div>
+      <div class="column__1-2"><div class="panel">1-2</div></div>
+    </div>
+
+    <div class="column">
+      <div class="column__desk-1-2"><div class="panel">DESK-1-2</div></div>
+      <div class="column__desk-1-2 separate--top flush-desk--top"><div class="panel">DESK-1-2</div></div>
+    </div>
+
+    <h2>Column nested</h2>
+
+    <div class="column">
+      <div class="column__1-2"><div class="panel">1-2</div></div>
+      <div class="column__1-2">
+        <div class="column">
+          <div class="column__1-2"><div class="panel">1-2</div></div>
+          <div class="column__1-2"><div class="panel">1-2</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="column__lap-1-2"><div class="panel">LAP-1-2</div></div>
+      <div class="column__lap-1-2">
+        <div class="column">
+          <div class="column__lap-1-2"><div class="panel">LAP-1-2</div></div>
+          <div class="column__lap-1-2"><div class="panel">LAP-1-2</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="column__desk-1-2"><div class="panel">DESK-1-2</div></div>
+      <div class="column__desk-1-2">
+        <div class="column">
+          <div class="column__desk-1-2"><div class="panel">DESK-1-2</div></div>
+          <div class="column__desk-1-2"><div class="panel">DESK-1-2</div></div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Column combined</h2>
+
+    <p>Using <code>visible--*</code> and <code>hidden--*</code> classes.</p>
+
+    <div class="column">
+      <div class="column__desk-1-3 column__lap-1-2"><div class="panel">LAP-1-2 DESK-1-3</div></div>
+      <div class="column__desk-1-3 hidden--lap"><div class="panel">hidden--lap</div></div>
+      <div class="column__desk-1-3 column__lap-1-2"><div class="panel">LAP-1-2 DESK-1-3</div></div>
+    </div>
+
+    <div class="column">
+      <div class="column__lap-1-3 column__1-2"><div class="panel">1-2 LAP-1-3</div></div>
+      <div class="column__lap-1-3 hidden--palm"><div class="panel">hidden--palm</div></div>
+      <div class="column__lap-1-3 column__1-2"><div class="panel">1-2 LAP-1-3</div></div>
+    </div>
+
+    <div class="column">
+      <div class="column__1-1 visible--palm"><div class="panel">100 visible--palm</div></div>
+      <div class="column__lap-1-1 visible--lap"><div class="panel">LAP-1-1 visible--lap</div></div>
+      <div class="column__desk-1-1 visible--desk"><div class="panel">DESK-1-1 visible--desk</div></div>
+    </div>
+
+    <div class="column">
+      <div class="column__1-1 hidden--desk"><div class="panel">100 hidden--desk</div></div>
+      <div class="column__desk-1-2"><div class="panel">DESK-1-2</div></div>
+      <div class="column__desk-1-2"><div class="panel">DESK-1-2</div></div>
+    </div>
+
+    <h2>Push / Pull</h2>
+
+    <p>Works only with <code>column__lap-*</code></p>
+
+    <div class="column">
+      <div class="column__lap-1-3 column-push--2-3"><div class="panel">First</div></div>
+      <div class="column__lap-2-3 column-pull--1-3"><div class="panel">Last</div></div>
+    </div>
+
+    <h2>More complexity</h2>
+
+    <div class="column">
+      <div class="column__lap-1-4"><div class="panel">Here is some multiline text for testing purpose.</div></div>
+      <div class="column__lap-1-4"><div class="panel">LAP-1-4</div></div>
+      <div class="column__lap-1-4"><div class="panel">LAP-1-4</div></div>
+      <div class="column__lap-1-4">
+        <div class="column">
+          <div class="column__lap-1-3"><div class="panel">LAP-1-3</div></div>
+          <div class="column__lap-1-3"><div class="panel">LAP-1-3</div></div>
+          <div class="column__lap-1-3"><div class="panel">LAP-1-3</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="column__lap-1-3"><div class="panel">LAP-1-3</div></div>
+      <div class="column__lap-1-3"><div class="panel">LAP-1-3</div></div>
+      <div class="column__lap-1-3">
+        <div class="column">
+          <div class="column__lap-1-4"><div class="panel">LAP-1-4</div></div>
+          <div class="column__lap-1-4"><div class="panel">LAP-1-4</div></div>
+          <div class="column__lap-1-4"><div class="panel">LAP-1-4</div></div>
+          <div class="column__lap-1-4"><div class="panel">LAP-1-4</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="column__1-2"><div class="panel">1-2</div></div>
+      <div class="column__1-2"><div class="panel">1-2</div></div>
+    </div>
+
+    <div class="column">
+      <div class="column__lap-1-2 col-push--1-4">
+
+        <div class="column">
+          <div class="column__1-2"><div class="panel">1-2</div></div>
+          <div class="column__1-2"><div class="panel">1-2</div></div>
+        </div>
+
+        <p>Some paragraph</p>
+        <p>Another paragraph</p>
+
+        <div class="column">
+          <div class="column__lap-1-2"><div class="panel">LAP-1-2</div></div>
+          <div class="column__lap-1-2"><div class="panel">LAP-1-2</div></div>
+        </div>
+
+      </div>
+      <div class="column__1-2 column__lap-1-4 col-pull--1-2">
+        <div class="panel">Box</div>
+        <div class="panel">Box</div>
+        <div class="panel">Box</div>
+        <div class="panel">Box</div>
+
+      </div>
+      <div class="column__1-2 column__lap-1-4">
+        <div class="panel">Box</div>
+        <div class="panel">Box</div>
+        <div class="panel">Box</div>
+        <div class="panel">Box</div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="column__1-2">
+        <div class="column">
+          <div class="column__1-4"><div class="panel">1-4</div></div>
+          <div class="column__1-4"><div class="panel">1-4</div></div>
+          <div class="column__1-4"><div class="panel">1-4</div></div>
+          <div class="column__1-4"><div class="panel">1-4</div></div>
+          <div class="column__1-4"><div class="panel">1-4</div></div>
+          <div class="column__1-4"><div class="panel">1-4</div></div>
+          <div class="column__1-4"><div class="panel">1-4</div></div>
+          <div class="column__1-4"><div class="panel">1-4</div></div>
+        </div>
+      </div>
+      <div class="column__1-2"><div class="panel">1-2</div></div>
+    </div>
+
+    <h2>Multi-row</h2>
+
+    <p>This column contains multiple boxes which floats into multiple rows.</p>
+
+    <ul class="column">
+      <li class="column__lap-1-2"><div class="panel">LAP-1-2</div></li>
+      <li class="column__lap-1-4"><div class="panel">LAP-1-4</div></li>
+      <li class="column__lap-1-4"><div class="panel">LAP-1-4</div></li>
+      <li class="column__lap-1-5"><div class="panel">LAP-1-5</div></li>
+      <li class="column__lap-1-5"><div class="panel">LAP-1-5</div></li>
+      <li class="column__lap-3-5"><div class="panel">LAP-3-5</div></li>
+    </ul>
+
+    <h2>Custom pixel widths</h2>
+
+    <ul class="column">
+      <li class="column__width"><div class="panel">Custom</div></li>
+      <li class="column__width"><div class="panel">Custom</div></li>
+      <li class="column__width"><div class="panel">Custom</div></li>
+      <li class="column__width"><div class="panel">Custom</div></li>
+      <li class="column__width"><div class="panel">Custom</div></li>
+      <li class="column__width"><div class="panel">Custom</div></li>
+      <li class="column__width"><div class="panel">Custom</div></li>
+      <li class="column__width"><div class="panel">Custom</div></li>
+    </ul>
+
+    <h2>Small gutter</h2>
+
+    <div class="column column--small">
+      <div class="column__1-2"><div class="panel">1-2</div></div>
+      <div class="column__1-2"><div class="panel">1-2</div></div>
+    </div>
+
+    <div class="column column--small">
+      <div class="column__lap-1-2"><div class="panel">LAP-1-2</div></div>
+      <div class="column__lap-1-2 separate--small-top flush-lap--top"><div class="panel">LAP-1-2</div></div>
+  </div>
+
+    <div class="column column--small">
+      <div class="column__desk-1-2"><div class="panel">DESK-1-2</div></div>
+      <div class="column__desk-1-2"><div class="panel">DESK-1-2</div></div>
+    </div>
+
+    <h2>Divider</h2>
+
+    <div class="column column--divider">
+      <div class="column__1-2"><div class="panel">1-2</div></div>
+      <div class="column__1-2">
+        <div class="column column--divider">
+          <div class="column__1-2"><div class="panel">1-2</div></div>
+          <div class="column__1-2"><div class="panel">1-2</div></div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="column--divider">
+
+    <div class="column column--divider">
+      <div class="column__lap-1-2"><div class="panel">LAP-1-2</div></div>
+      <div class="column__lap-1-2">
+        <div class="column column--divider">
+          <div class="column__lap-1-2"><div class="panel">LAP-1-2</div></div>
+          <div class="column__lap-1-2"><div class="panel">LAP-1-2</div></div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="column--divider">
+
+    <div class="column column--divider">
+      <div class="column__desk-1-2"><div class="panel">DESK-1-2</div></div>
+      <div class="column__desk-1-2">
+        <div class="column column--divider">
+          <div class="column__desk-1-2"><div class="panel">DESK-1-2</div></div>
+          <div class="column__desk-1-2"><div class="panel">DESK-1-2</div></div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="column--divider">
+
+    <div class="column column--divider">
+      <div class="column__desk-1-3 column__lap-1-2"><div class="panel">LAP-1-2 DESK-1-3</div></div>
+      <div class="column__desk-1-3 hidden--lap"><div class="panel">hidden--medium</div></div>
+      <div class="column__desk-1-3 column__lap-1-2"><div class="panel">LAP-1-2 DESK-1-3</div></div>
+    </div>
+
+    <hr class="column--divider">
+
+    <div class="column column--divider">
+      <div class="column__lap-1-3 column__1-2"><div class="panel">1-2 LAP-1-3</div></div>
+      <div class="column__lap-1-3 hidden--palm"><div class="panel">hidden--small</div></div>
+      <div class="column__lap-1-3 column__1-2"><div class="panel">1-2 LAP-1-3</div></div>
+    </div>
+
+    <hr class="column--divider">
+
+    <div class="column column--divider">
+      <div class="column__1-1 visible--palm"><div class="panel">100 visible--small</div></div>
+      <div class="column__lap-1-1 visible--lap"><div class="panel">LAP-1-1 visible--medium</div></div>
+      <div class="column__desk-1-1 visible--desk"><div class="panel">DESK-1-1 visible--large</div></div>
+    </div>
+
+    <h2>Even widths</h2>
+
+    <ul class="column column-even--1-2 column-even--palm-1-3 column-even--lap-1-4 column-even--desk-1-5 column-even--huge-1-6">
+      <li><div class="panel">1-2<br>PALM-1-3<br>LAP-1-4<br>DESK-1-5<br>HUGE-1-6<div></li>
+      <li><div class="panel">1-2<br>PALM-1-3<br>LAP-1-4<br>DESK-1-5<br>HUGE-1-6<div></li>
+      <li><div class="panel">1-2<br>PALM-1-3<br>LAP-1-4<br>DESK-1-5<br>HUGE-1-6<div></li>
+      <li><div class="panel">1-2<br>PALM-1-3<br>LAP-1-4<br>DESK-1-5<br>HUGE-1-6<div></li>
+      <li><div class="panel">1-2<br>PALM-1-3<br>LAP-1-4<br>DESK-1-5<br>HUGE-1-6<div></li>
+      <li><div class="panel">1-2<br>PALM-1-3<br>LAP-1-4<br>DESK-1-5<br>HUGE-1-6<div></li>
+    </ul>
+
+    <h2>Equal height</h2>
+
+    <div class="column">
+      <div class="column__equal">
+        <div class="column__lap-1-1 column__lap-1-3">
+          <p>This is a short row</p>
+        </div>
+        <div class="column__lap-1-1 column__lap-1-3">
+          <p>This is a short row</p>
+        </div>
+        <div class="column__lap-1-1 column__lap-1-3">
+          <p>This is a very long row with lots of text in it and way more text than the other rows</p>
+          <p>It might even span for multiple paragraphs.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>Caption</h2>
+
+    <div class="column">
+
+      <div class="column__1-1 column__lap-1-3 separate--bottom">
+        <div class="caption">
+          <img src="http://placehold.it/400x250&text=full">
+          <div class="caption__full">
+            <div class="caption__content">
+              <p>Lorem <a href="#">ipsum dolor</a> sit amet, consetetur sadipscing elitr.</p>
+              <button class="button">Button</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column__1-1 column__lap-1-3 separate--bottom">
+        <div class="caption">
+          <img src="http://placehold.it/400x250&text=bottom">
+          <div class="caption__bottom">Some text</div>
+        </div>
+      </div>
+
+      <div class="column__1-1 column__lap-1-3 separate--bottom">
+        <div class="caption">
+          <img src="http://placehold.it/400x250&text=top">
+          <div class="caption__top">Some text</div>
+        </div>
+      </div>
+
+      <div class="column__1-1 column__lap-1-3 separate--bottom">
+        <div class="caption caption--fade">
+          <img src="http://placehold.it/400x250&text=fade">
+          <div class="caption__full">
+            <div class="caption__content">
+              <p>Lorem <a href="#">ipsum dolor</a> sit amet, consetetur sadipscing elitr.</p>
+              <button class="button">Button</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column__1-1 column__lap-1-3 separate--bottom">
+        <div class="caption caption--fade">
+          <img src="http://placehold.it/400x250&text=fade">
+          <div class="caption__bottom">Some text</div>
+        </div>
+      </div>
+
+      <div class="column__1-1 column__lap-1-3 separate--bottom">
+        <div class="caption caption--fade">
+          <img src="http://placehold.it/400x250&text=fade">
+          <div class="caption__top">Some text</div>
+        </div>
+      </div>
+
+    </div>
+
+    <h2>Media</h2>
+
+    <div class="column">
+      <div class="column__1-2 column__lap-1-4">
+        <img class="media" src="http://placehold.it/200x100">
+      </div>
+
+      <div class="column__1-2 column__lap-1-4">
+        <a href="#" class="media">
+          <img src="http://placehold.it/200x100">
+        </a>
+      </div>
+
+      <div class="column__1-2 column__lap-1-4">
+        <div class="media">
+          <img src="http://placehold.it/200x100">
+          <div class="media__caption">Some text</div>
+        </div>
+      </div>
+
+      <div class="column__1-2 column__1-4">
+        <div class="media media--tiny">
+          <img src="http://placehold.it/600x400&text=150px">
+          <div class="media__caption">media tiny</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="column__1-3">
+        <div class="media media--small">
+          <img src="http://placehold.it/600x400&text=200px">
+          <div class="media__caption">media small</div>
+        </div>
+      </div>
+
+      <div class="column__1-3">
+        <div class="media media--medium">
+          <img src="http://placehold.it/600x400&text=300px">
+          <div class="media__caption">media medium</div>
+        </div>
+      </div>
+
+      <div class="column__1-3">
+        <div class="media media--large">
+          <img src="http://placehold.it/600x400&text=400px">
+          <div class="media__caption">media large</div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Table</h2>
+
+    <div class="column">
+      <div class="column__1-1">
+        <table class="table">
+          <thead>
+            <tr>
+              <td data-label="#">#</td>
+              <td data-label="First Name">First Name</td>
+              <td data-label="Last Name">Last Name</td>
+              <td data-label="Username">Username</td>
+            </tr>
+          </thead>
+          
+          <tbody>
+            <tr>
+              <td data-label="#">1</td>
+              <td data-label="First Name">Kanikar</td>
+              <td data-label="Last Name">Phan</td>
+              <td data-label="Username">@kanikarphan</td>
+            </tr>
+            
+            <tr>
+              <td data-label="#">2</td>
+              <td data-label="First Name">Misty</td>
+              <td data-label="Last Name">Montgomery</td>
+              <td data-label="Username">@misty</td>
+            </tr>
+            
+            <tr>
+              <td data-label="#">3</td>
+              <td data-label="First Name">Maria</td>
+              <td data-label="Last Name">Hawkins</td>
+              <td data-label="Username">@maria</td>
+            </tr>
+            
+            <tr>
+              <td data-label="#">4</td>
+              <td data-label="First Name">Philip</td>
+              <td data-label="Last Name">Burke</td>
+              <td data-label="Username">@philip</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <h2>Form</h2>
+
+    <div class="column">
+
+      <div class="column__1-1">
+        <h3 class="separate--bottom">Input</h3>
+        <input type="text" placeholder="Search">
+      </div>
+      
+      <div class="column__1-1 separate--top">
+        <h3 class="separate--bottom">Textarea</h3>
+        <textarea placeholder="Message"></textarea>
+      </div>
+      
+      <div class="column__1-1 separate--top">
+        <h3 class="separate--bottom">Checkbox</h3>
+        <ul class="list--inline">
+          <li>
+            <label class="input--checkbox" for="facebook">
+              <span class="float--left">
+                <input id="facebook" name="checkboxes" type="checkbox" />
+                <label class="input--replacement input-replacement--checkbox" for="facebook"></label>
+              </span>
+            
+              <span class="input--label">Yes</span>
+            </label>
+          </li>
+        
+          <li class="">
+            <label class="input--checkbox" for="twitter">
+              <span class="float--left">
+                <input id="twitter" name="checkboxes" type="checkbox" />
+                <label class="input--replacement input-replacement--checkbox" for="twitter"></label>
+              </span>
+            
+              <span class="input--label">No</span>
+            </label>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="column__1-1 separate--top">
+        <h3 class="separate--bottom">Radio</h3>
+  
+        <ul class="list--inline">
+          <li>
+            <label class="input--radio" for="yes">
+              <span class="float--left">
+                <input id="yes" name="radios" type="radio">
+                <label class="input--replacement input-replacement--radio" for="yes"></label>
+              </span>
+            
+              <span class="input--label">Yes</span>
+            </label>
+          </li>
+          <li>
+            <label class="input--radio" for="no">
+              <span class="float--left">
+                <input id="no" name="radios" type="radio">
+                <label class="input--replacement input-replacement--radio" for="no"></label>
+              </span>
+            
+              <span class="input--label">No</span>
+            </label>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Progress Bars</h2>
+
+    <div class="column">
+      <div class="column__1-1 separate--bottom">
+          <div class="progress">
+              <div class="progress__bar progress--alpha progress-width--alpha">40%</div>
+          </div>
+      </div>
+
+      <div class="column__1-1 separate--bottom">
+          <div class="progress">
+              <div class="progress__bar progress--beta progress-width--beta">20%</div>
+          </div>
+      </div>
+
+      <div class="column__1-1 separate--bottom">
+          <div class="progress">
+              <div class="progress__bar progress--gamma progress-width--gamma">90%</div>
+          </div>
+      </div>
+
+      <div class="column__1-1">
+        <div class="progress">
+          <div class="progress__bar progress--delta progress-width--delta">60%</div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Icons</h2>
+
+    <ul class="column column-even--1-1 column-even--palm-1-2 column-even--lap-1-3 column-even--desk-1-4">
+      <li>
+        <span class="icon--home"></span> <span class="text--micro">icon--home</span>
+      </li>
+      <li>
+        <span class="icon--home2"></span> <span class="text--micro">icon--home2</span>
+      </li>
+      <li>
+        <span class="icon--home3"></span> <span class="text--micro">icon--home3</span>
+      </li>
+      <li>
+        <span class="icon--office"></span> <span class="text--micro">icon--office</span>
+      </li>
+      <li>
+        <span class="icon--newspaper"></span> <span class="text--micro">icon--newspaper</span>
+      </li>
+      <li>
+        <span class="icon--pencil"></span> <span class="text--micro">icon--pencil</span>
+      </li>
+      <li>
+        <span class="icon--pencil2"></span> <span class="text--micro">icon--pencil2</span>
+      </li>
+      <li>
+        <span class="icon--quill"></span> <span class="text--micro">icon--quill</span>
+      </li>
+      <li>
+        <span class="icon--pen"></span> <span class="text--micro">icon--pen</span>
+      </li>
+      <li>
+        <span class="icon--blog"></span> <span class="text--micro">icon--blog</span>
+      </li>
+      <li>
+        <span class="icon--droplet"></span> <span class="text--micro">icon--droplet</span>
+      </li>
+      <li>
+        <span class="icon--paint-format"></span> <span class="text--micro">icon--paint-format</span>
+      </li>
+      <li>
+        <span class="icon--image"></span> <span class="text--micro">icon--image</span>
+      </li>
+      <li>
+        <span class="icon--image2"></span> <span class="text--micro">icon--image2</span>
+      </li>
+      <li>
+        <span class="icon--images"></span> <span class="text--micro">icon--images</span>
+      </li>
+      <li>
+        <span class="icon--camera"></span> <span class="text--micro">icon--camera</span>
+      </li>
+      <li>
+        <span class="icon--music"></span> <span class="text--micro">icon--music</span>
+      </li>
+      <li>
+        <span class="icon--headphones"></span> <span class="text--micro">icon--headphones</span>
+      </li>
+      <li>
+        <span class="icon--play"></span> <span class="text--micro">icon--play</span>
+      </li>
+      <li>
+        <span class="icon--film"></span> <span class="text--micro">icon--film</span>
+      </li>
+      <li>
+        <span class="icon--camera2"></span> <span class="text--micro">icon--camera2</span>
+      </li>
+      <li>
+        <span class="icon--dice"></span> <span class="text--micro">icon--dice</span>
+      </li>
+      <li>
+        <span class="icon--pacman"></span> <span class="text--micro">icon--pacman</span>
+      </li>
+      <li>
+        <span class="icon--spades"></span> <span class="text--micro">icon--spades</span>
+      </li>
+      <li>
+        <span class="icon--clubs"></span> <span class="text--micro">icon--clubs</span>
+      </li>
+      <li>
+        <span class="icon--diamonds"></span> <span class="text--micro">icon--diamonds</span>
+      </li>
+      <li>
+        <span class="icon--pawn"></span> <span class="text--micro">icon--pawn</span>
+      </li>
+      <li>
+        <span class="icon--bullhorn"></span> <span class="text--micro">icon--bullhorn</span>
+      </li>
+      <li>
+        <span class="icon--connection"></span> <span class="text--micro">icon--connection</span>
+      </li>
+      <li>
+        <span class="icon--podcast"></span> <span class="text--micro">icon--podcast</span>
+      </li>
+      <li>
+        <span class="icon--feed"></span> <span class="text--micro">icon--feed</span>
+      </li>
+      <li>
+        <span class="icon--book"></span> <span class="text--micro">icon--book</span>
+      </li>
+      <li>
+        <span class="icon--books"></span> <span class="text--micro">icon--books</span>
+      </li>
+      <li>
+        <span class="icon--library"></span> <span class="text--micro">icon--library</span>
+      </li>
+      <li>
+        <span class="icon--file"></span> <span class="text--micro">icon--file</span>
+      </li>
+      <li>
+        <span class="icon--profile"></span> <span class="text--micro">icon--profile</span>
+      </li>
+      <li>
+        <span class="icon--file2"></span> <span class="text--micro">icon--file2</span>
+      </li>
+      <li>
+        <span class="icon--file3"></span> <span class="text--micro">icon--file3</span>
+      </li>
+      <li>
+        <span class="icon--file4"></span> <span class="text--micro">icon--file4</span>
+      </li>
+      <li>
+        <span class="icon--copy"></span> <span class="text--micro">icon--copy</span>
+      </li>
+      <li>
+        <span class="icon--copy2"></span> <span class="text--micro">icon--copy2</span>
+      </li>
+      <li>
+        <span class="icon--copy3"></span> <span class="text--micro">icon--copy3</span>
+      </li>
+      <li>
+        <span class="icon--paste"></span> <span class="text--micro">icon--paste</span>
+      </li>
+      <li>
+        <span class="icon--paste2"></span> <span class="text--micro">icon--paste2</span>
+      </li>
+      <li>
+        <span class="icon--paste3"></span> <span class="text--micro">icon--paste3</span>
+      </li>
+      <li>
+        <span class="icon--stack"></span> <span class="text--micro">icon--stack</span>
+      </li>
+      <li>
+        <span class="icon--folder"></span> <span class="text--micro">icon--folder</span>
+      </li>
+      <li>
+        <span class="icon--folder-open"></span> <span class="text--micro">icon--folder-open</span>
+      </li>
+      <li>
+        <span class="icon--tag"></span> <span class="text--micro">icon--tag</span>
+      </li>
+      <li>
+        <span class="icon--tags"></span> <span class="text--micro">icon--tags</span>
+      </li>
+      <li>
+        <span class="icon--barcode"></span> <span class="text--micro">icon--barcode</span>
+      </li>
+      <li>
+        <span class="icon--qrcode"></span> <span class="text--micro">icon--qrcode</span>
+      </li>
+      <li>
+        <span class="icon--ticket"></span> <span class="text--micro">icon--ticket</span>
+      </li>
+      <li>
+        <span class="icon--cart"></span> <span class="text--micro">icon--cart</span>
+      </li>
+      <li>
+        <span class="icon--cart2"></span> <span class="text--micro">icon--cart2</span>
+      </li>
+      <li>
+        <span class="icon--cart3"></span> <span class="text--micro">icon--cart3</span>
+      </li>
+      <li>
+        <span class="icon--coin"></span> <span class="text--micro">icon--coin</span>
+      </li>
+      <li>
+        <span class="icon--credit"></span> <span class="text--micro">icon--credit</span>
+      </li>
+      <li>
+        <span class="icon--calculate"></span> <span class="text--micro">icon--calculate</span>
+      </li>
+      <li>
+        <span class="icon--support"></span> <span class="text--micro">icon--support</span>
+      </li>
+      <li>
+        <span class="icon--phone"></span> <span class="text--micro">icon--phone</span>
+      </li>
+      <li>
+        <span class="icon--phone-hang-up"></span> <span class="text--micro">icon--phone-hang-up</span>
+      </li>
+      <li>
+        <span class="icon--address-book"></span> <span class="text--micro">icon--address-book</span>
+      </li>
+      <li>
+        <span class="icon--notebook"></span> <span class="text--micro">icon--notebook</span>
+      </li>
+      <li>
+        <span class="icon--envelope"></span> <span class="text--micro">icon--envelope</span>
+      </li>
+      <li>
+        <span class="icon--pushpin"></span> <span class="text--micro">icon--pushpin</span>
+      </li>
+      <li>
+        <span class="icon--location"></span> <span class="text--micro">icon--location</span>
+      </li>
+      <li>
+        <span class="icon--location2"></span> <span class="text--micro">icon--location2</span>
+      </li>
+      <li>
+        <span class="icon--compass"></span> <span class="text--micro">icon--compass</span>
+      </li>
+      <li>
+        <span class="icon--map"></span> <span class="text--micro">icon--map</span>
+      </li>
+      <li>
+        <span class="icon--map2"></span> <span class="text--micro">icon--map2</span>
+      </li>
+      <li>
+        <span class="icon--history"></span> <span class="text--micro">icon--history</span>
+      </li>
+      <li>
+        <span class="icon--clock"></span> <span class="text--micro">icon--clock</span>
+      </li>
+      <li>
+        <span class="icon--clock2"></span> <span class="text--micro">icon--clock2</span>
+      </li>
+      <li>
+        <span class="icon--alarm"></span> <span class="text--micro">icon--alarm</span>
+      </li>
+      <li>
+        <span class="icon--alarm2"></span> <span class="text--micro">icon--alarm2</span>
+      </li>
+      <li>
+        <span class="icon--bell"></span> <span class="text--micro">icon--bell</span>
+      </li>
+      <li>
+        <span class="icon--stopwatch"></span> <span class="text--micro">icon--stopwatch</span>
+      </li>
+      <li>
+        <span class="icon--calendar"></span> <span class="text--micro">icon--calendar</span>
+      </li>
+      <li>
+        <span class="icon--calendar2"></span> <span class="text--micro">icon--calendar2</span>
+      </li>
+      <li>
+        <span class="icon--print"></span> <span class="text--micro">icon--print</span>
+      </li>
+      <li>
+        <span class="icon--keyboard"></span> <span class="text--micro">icon--keyboard</span>
+      </li>
+      <li>
+        <span class="icon--screen"></span> <span class="text--micro">icon--screen</span>
+      </li>
+      <li>
+        <span class="icon--laptop"></span> <span class="text--micro">icon--laptop</span>
+      </li>
+      <li>
+        <span class="icon--mobile"></span> <span class="text--micro">icon--mobile</span>
+      </li>
+      <li>
+        <span class="icon--mobile2"></span> <span class="text--micro">icon--mobile2</span>
+      </li>
+      <li>
+        <span class="icon--tablet"></span> <span class="text--micro">icon--tablet</span>
+      </li>
+      <li>
+        <span class="icon--tv"></span> <span class="text--micro">icon--tv</span>
+      </li>
+      <li>
+        <span class="icon--cabinet"></span> <span class="text--micro">icon--cabinet</span>
+      </li>
+      <li>
+        <span class="icon--drawer"></span> <span class="text--micro">icon--drawer</span>
+      </li>
+      <li>
+        <span class="icon--drawer2"></span> <span class="text--micro">icon--drawer2</span>
+      </li>
+      <li>
+        <span class="icon--drawer3"></span> <span class="text--micro">icon--drawer3</span>
+      </li>
+      <li>
+        <span class="icon--box-add"></span> <span class="text--micro">icon--box-add</span>
+      </li>
+      <li>
+        <span class="icon--box-remove"></span> <span class="text--micro">icon--box-remove</span>
+      </li>
+      <li>
+        <span class="icon--download"></span> <span class="text--micro">icon--download</span>
+      </li>
+      <li>
+        <span class="icon--upload"></span> <span class="text--micro">icon--upload</span>
+      </li>
+      <li>
+        <span class="icon--disk"></span> <span class="text--micro">icon--disk</span>
+      </li>
+      <li>
+        <span class="icon--storage"></span> <span class="text--micro">icon--storage</span>
+      </li>
+      <li>
+        <span class="icon--undo"></span> <span class="text--micro">icon--undo</span>
+      </li>
+      <li>
+        <span class="icon--redo"></span> <span class="text--micro">icon--redo</span>
+      </li>
+      <li>
+        <span class="icon--flip"></span> <span class="text--micro">icon--flip</span>
+      </li>
+      <li>
+        <span class="icon--flip2"></span> <span class="text--micro">icon--flip2</span>
+      </li>
+      <li>
+        <span class="icon--undo2"></span> <span class="text--micro">icon--undo2</span>
+      </li>
+      <li>
+        <span class="icon--redo2"></span> <span class="text--micro">icon--redo2</span>
+      </li>
+      <li>
+        <span class="icon--forward"></span> <span class="text--micro">icon--forward</span>
+      </li>
+      <li>
+        <span class="icon--reply"></span> <span class="text--micro">icon--reply</span>
+      </li>
+      <li>
+        <span class="icon--bubble"></span> <span class="text--micro">icon--bubble</span>
+      </li>
+      <li>
+        <span class="icon--bubbles"></span> <span class="text--micro">icon--bubbles</span>
+      </li>
+      <li>
+        <span class="icon--bubbles2"></span> <span class="text--micro">icon--bubbles2</span>
+      </li>
+      <li>
+        <span class="icon--bubble2"></span> <span class="text--micro">icon--bubble2</span>
+      </li>
+      <li>
+        <span class="icon--bubbles3"></span> <span class="text--micro">icon--bubbles3</span>
+      </li>
+      <li>
+        <span class="icon--bubbles4"></span> <span class="text--micro">icon--bubbles4</span>
+      </li>
+      <li>
+        <span class="icon--user"></span> <span class="text--micro">icon--user</span>
+      </li>
+      <li>
+        <span class="icon--users"></span> <span class="text--micro">icon--users</span>
+      </li>
+      <li>
+        <span class="icon--user2"></span> <span class="text--micro">icon--user2</span>
+      </li>
+      <li>
+        <span class="icon--users2"></span> <span class="text--micro">icon--users2</span>
+      </li>
+      <li>
+        <span class="icon--user3"></span> <span class="text--micro">icon--user3</span>
+      </li>
+      <li>
+        <span class="icon--user4"></span> <span class="text--micro">icon--user4</span>
+      </li>
+      <li>
+        <span class="icon--quotes-left"></span> <span class="text--micro">icon--quotes-left</span>
+      </li>
+      <li>
+        <span class="icon--busy"></span> <span class="text--micro">icon--busy</span>
+      </li>
+      <li>
+        <span class="icon--spinner"></span> <span class="text--micro">icon--spinner</span>
+      </li>
+      <li>
+        <span class="icon--spinner2"></span> <span class="text--micro">icon--spinner2</span>
+      </li>
+      <li>
+        <span class="icon--spinner3"></span> <span class="text--micro">icon--spinner3</span>
+      </li>
+      <li>
+        <span class="icon--spinner4"></span> <span class="text--micro">icon--spinner4</span>
+      </li>
+      <li>
+        <span class="icon--spinner5"></span> <span class="text--micro">icon--spinner5</span>
+      </li>
+      <li>
+        <span class="icon--spinner6"></span> <span class="text--micro">icon--spinner6</span>
+      </li>
+      <li>
+        <span class="icon--binoculars"></span> <span class="text--micro">icon--binoculars</span>
+      </li>
+      <li>
+        <span class="icon--search"></span> <span class="text--micro">icon--search</span>
+      </li>
+      <li>
+        <span class="icon--zoomin"></span> <span class="text--micro">icon--zoomin</span>
+      </li>
+      <li>
+        <span class="icon--zoomout"></span> <span class="text--micro">icon--zoomout</span>
+      </li>
+      <li>
+        <span class="icon--expand"></span> <span class="text--micro">icon--expand</span>
+      </li>
+      <li>
+        <span class="icon--contract"></span> <span class="text--micro">icon--contract</span>
+      </li>
+      <li>
+        <span class="icon--expand2"></span> <span class="text--micro">icon--expand2</span>
+      </li>
+      <li>
+        <span class="icon--contract2"></span> <span class="text--micro">icon--contract2</span>
+      </li>
+      <li>
+        <span class="icon--key"></span> <span class="text--micro">icon--key</span>
+      </li>
+      <li>
+        <span class="icon--key2"></span> <span class="text--micro">icon--key2</span>
+      </li>
+      <li>
+        <span class="icon--lock"></span> <span class="text--micro">icon--lock</span>
+      </li>
+      <li>
+        <span class="icon--lock2"></span> <span class="text--micro">icon--lock2</span>
+      </li>
+      <li>
+        <span class="icon--unlocked"></span> <span class="text--micro">icon--unlocked</span>
+      </li>
+      <li>
+        <span class="icon--wrench"></span> <span class="text--micro">icon--wrench</span>
+      </li>
+      <li>
+        <span class="icon--settings"></span> <span class="text--micro">icon--settings</span>
+      </li>
+      <li>
+        <span class="icon--equalizer"></span> <span class="text--micro">icon--equalizer</span>
+      </li>
+      <li>
+        <span class="icon--cog"></span> <span class="text--micro">icon--cog</span>
+      </li>
+      <li>
+        <span class="icon--cogs"></span> <span class="text--micro">icon--cogs</span>
+      </li>
+      <li>
+        <span class="icon--cog2"></span> <span class="text--micro">icon--cog2</span>
+      </li>
+      <li>
+        <span class="icon--hammer"></span> <span class="text--micro">icon--hammer</span>
+      </li>
+      <li>
+        <span class="icon--wand"></span> <span class="text--micro">icon--wand</span>
+      </li>
+      <li>
+        <span class="icon--aid"></span> <span class="text--micro">icon--aid</span>
+      </li>
+      <li>
+        <span class="icon--bug"></span> <span class="text--micro">icon--bug</span>
+      </li>
+      <li>
+        <span class="icon--pie"></span> <span class="text--micro">icon--pie</span>
+      </li>
+      <li>
+        <span class="icon--stats"></span> <span class="text--micro">icon--stats</span>
+      </li>
+      <li>
+        <span class="icon--bars"></span> <span class="text--micro">icon--bars</span>
+      </li>
+      <li>
+        <span class="icon--bars2"></span> <span class="text--micro">icon--bars2</span>
+      </li>
+      <li>
+        <span class="icon--gift"></span> <span class="text--micro">icon--gift</span>
+      </li>
+      <li>
+        <span class="icon--trophy"></span> <span class="text--micro">icon--trophy</span>
+      </li>
+      <li>
+        <span class="icon--glass"></span> <span class="text--micro">icon--glass</span>
+      </li>
+      <li>
+        <span class="icon--mug"></span> <span class="text--micro">icon--mug</span>
+      </li>
+      <li>
+        <span class="icon--food"></span> <span class="text--micro">icon--food</span>
+      </li>
+      <li>
+        <span class="icon--leaf"></span> <span class="text--micro">icon--leaf</span>
+      </li>
+      <li>
+        <span class="icon--rocket"></span> <span class="text--micro">icon--rocket</span>
+      </li>
+      <li>
+        <span class="icon--meter"></span> <span class="text--micro">icon--meter</span>
+      </li>
+      <li>
+        <span class="icon--meter2"></span> <span class="text--micro">icon--meter2</span>
+      </li>
+      <li>
+        <span class="icon--dashboard"></span> <span class="text--micro">icon--dashboard</span>
+      </li>
+      <li>
+        <span class="icon--hammer2"></span> <span class="text--micro">icon--hammer2</span>
+      </li>
+      <li>
+        <span class="icon--fire"></span> <span class="text--micro">icon--fire</span>
+      </li>
+      <li>
+        <span class="icon--lab"></span> <span class="text--micro">icon--lab</span>
+      </li>
+      <li>
+        <span class="icon--magnet"></span> <span class="text--micro">icon--magnet</span>
+      </li>
+      <li>
+        <span class="icon--remove"></span> <span class="text--micro">icon--remove</span>
+      </li>
+      <li>
+        <span class="icon--remove2"></span> <span class="text--micro">icon--remove2</span>
+      </li>
+      <li>
+        <span class="icon--briefcase"></span> <span class="text--micro">icon--briefcase</span>
+      </li>
+      <li>
+        <span class="icon--airplane"></span> <span class="text--micro">icon--airplane</span>
+      </li>
+      <li>
+        <span class="icon--truck"></span> <span class="text--micro">icon--truck</span>
+      </li>
+      <li>
+        <span class="icon--road"></span> <span class="text--micro">icon--road</span>
+      </li>
+      <li>
+        <span class="icon--accessibility"></span> <span class="text--micro">icon--accessibility</span>
+      </li>
+      <li>
+        <span class="icon--target"></span> <span class="text--micro">icon--target</span>
+      </li>
+      <li>
+        <span class="icon--shield"></span> <span class="text--micro">icon--shield</span>
+      </li>
+      <li>
+        <span class="icon--lightning"></span> <span class="text--micro">icon--lightning</span>
+      </li>
+      <li>
+        <span class="icon--switch"></span> <span class="text--micro">icon--switch</span>
+      </li>
+      <li>
+        <span class="icon--powercord"></span> <span class="text--micro">icon--powercord</span>
+      </li>
+      <li>
+        <span class="icon--signup"></span> <span class="text--micro">icon--signup</span>
+      </li>
+      <li>
+        <span class="icon--list"></span> <span class="text--micro">icon--list</span>
+      </li>
+      <li>
+        <span class="icon--list2"></span> <span class="text--micro">icon--list2</span>
+      </li>
+      <li>
+        <span class="icon--numbered-list"></span> <span class="text--micro">icon--numbered-list</span>
+      </li>
+      <li>
+        <span class="icon--menu"></span> <span class="text--micro">icon--menu</span>
+      </li>
+      <li>
+        <span class="icon--menu2"></span> <span class="text--micro">icon--menu2</span>
+      </li>
+      <li>
+        <span class="icon--tree"></span> <span class="text--micro">icon--tree</span>
+      </li>
+      <li>
+        <span class="icon--cloud"></span> <span class="text--micro">icon--cloud</span>
+      </li>
+      <li>
+        <span class="icon--cloud-download"></span> <span class="text--micro">icon--cloud-download</span>
+      </li>
+      <li>
+        <span class="icon--cloud-upload"></span> <span class="text--micro">icon--cloud-upload</span>
+      </li>
+      <li>
+        <span class="icon--download2"></span> <span class="text--micro">icon--download2</span>
+      </li>
+      <li>
+        <span class="icon--upload2"></span> <span class="text--micro">icon--upload2</span>
+      </li>
+      <li>
+        <span class="icon--download3"></span> <span class="text--micro">icon--download3</span>
+      </li>
+      <li>
+        <span class="icon--upload3"></span> <span class="text--micro">icon--upload3</span>
+      </li>
+      <li>
+        <span class="icon--globe"></span> <span class="text--micro">icon--globe</span>
+      </li>
+      <li>
+        <span class="icon--earth"></span> <span class="text--micro">icon--earth</span>
+      </li>
+      <li>
+        <span class="icon--link"></span> <span class="text--micro">icon--link</span>
+      </li>
+      <li>
+        <span class="icon--flag"></span> <span class="text--micro">icon--flag</span>
+      </li>
+      <li>
+        <span class="icon--attachment"></span> <span class="text--micro">icon--attachment</span>
+      </li>
+      <li>
+        <span class="icon--eye"></span> <span class="text--micro">icon--eye</span>
+      </li>
+      <li>
+        <span class="icon--eye-blocked"></span> <span class="text--micro">icon--eye-blocked</span>
+      </li>
+      <li>
+        <span class="icon--eye2"></span> <span class="text--micro">icon--eye2</span>
+      </li>
+      <li>
+        <span class="icon--bookmark"></span> <span class="text--micro">icon--bookmark</span>
+      </li>
+      <li>
+        <span class="icon--bookmarks"></span> <span class="text--micro">icon--bookmarks</span>
+      </li>
+      <li>
+        <span class="icon--brightness-medium"></span> <span class="text--micro">icon--brightness-medium</span>
+      </li>
+      <li>
+        <span class="icon--brightness-contrast"></span> <span class="text--micro">icon--brightness-contrast</span>
+      </li>
+      <li>
+        <span class="icon--contrast"></span> <span class="text--micro">icon--contrast</span>
+      </li>
+      <li>
+        <span class="icon--star"></span> <span class="text--micro">icon--star</span>
+      </li>
+      <li>
+        <span class="icon--star2"></span> <span class="text--micro">icon--star2</span>
+      </li>
+      <li>
+        <span class="icon--star3"></span> <span class="text--micro">icon--star3</span>
+      </li>
+      <li>
+        <span class="icon--heart"></span> <span class="text--micro">icon--heart</span>
+      </li>
+      <li>
+        <span class="icon--heart2"></span> <span class="text--micro">icon--heart2</span>
+      </li>
+      <li>
+        <span class="icon--heart-broken"></span> <span class="text--micro">icon--heart-broken</span>
+      </li>
+      <li>
+        <span class="icon--thumbs-up"></span> <span class="text--micro">icon--thumbs-up</span>
+      </li>
+      <li>
+        <span class="icon--thumbs-up2"></span> <span class="text--micro">icon--thumbs-up2</span>
+      </li>
+      <li>
+        <span class="icon--happy"></span> <span class="text--micro">icon--happy</span>
+      </li>
+      <li>
+        <span class="icon--happy2"></span> <span class="text--micro">icon--happy2</span>
+      </li>
+      <li>
+        <span class="icon--smiley"></span> <span class="text--micro">icon--smiley</span>
+      </li>
+      <li>
+        <span class="icon--smiley2"></span> <span class="text--micro">icon--smiley2</span>
+      </li>
+      <li>
+        <span class="icon--tongue"></span> <span class="text--micro">icon--tongue</span>
+      </li>
+      <li>
+        <span class="icon--tongue2"></span> <span class="text--micro">icon--tongue2</span>
+      </li>
+      <li>
+        <span class="icon--sad"></span> <span class="text--micro">icon--sad</span>
+      </li>
+      <li>
+        <span class="icon--sad2"></span> <span class="text--micro">icon--sad2</span>
+      </li>
+      <li>
+        <span class="icon--wink"></span> <span class="text--micro">icon--wink</span>
+      </li>
+      <li>
+        <span class="icon--wink2"></span> <span class="text--micro">icon--wink2</span>
+      </li>
+      <li>
+        <span class="icon--grin"></span> <span class="text--micro">icon--grin</span>
+      </li>
+      <li>
+        <span class="icon--grin2"></span> <span class="text--micro">icon--grin2</span>
+      </li>
+      <li>
+        <span class="icon--cool"></span> <span class="text--micro">icon--cool</span>
+      </li>
+      <li>
+        <span class="icon--cool2"></span> <span class="text--micro">icon--cool2</span>
+      </li>
+      <li>
+        <span class="icon--angry"></span> <span class="text--micro">icon--angry</span>
+      </li>
+      <li>
+        <span class="icon--angry2"></span> <span class="text--micro">icon--angry2</span>
+      </li>
+      <li>
+        <span class="icon--evil"></span> <span class="text--micro">icon--evil</span>
+      </li>
+      <li>
+        <span class="icon--evil2"></span> <span class="text--micro">icon--evil2</span>
+      </li>
+      <li>
+        <span class="icon--shocked"></span> <span class="text--micro">icon--shocked</span>
+      </li>
+      <li>
+        <span class="icon--shocked2"></span> <span class="text--micro">icon--shocked2</span>
+      </li>
+      <li>
+        <span class="icon--confused"></span> <span class="text--micro">icon--confused</span>
+      </li>
+      <li>
+        <span class="icon--confused2"></span> <span class="text--micro">icon--confused2</span>
+      </li>
+      <li>
+        <span class="icon--neutral"></span> <span class="text--micro">icon--neutral</span>
+      </li>
+      <li>
+        <span class="icon--neutral2"></span> <span class="text--micro">icon--neutral2</span>
+      </li>
+      <li>
+        <span class="icon--wondering"></span> <span class="text--micro">icon--wondering</span>
+      </li>
+      <li>
+        <span class="icon--wondering2"></span> <span class="text--micro">icon--wondering2</span>
+      </li>
+      <li>
+        <span class="icon--point-up"></span> <span class="text--micro">icon--point-up</span>
+      </li>
+      <li>
+        <span class="icon--point-right"></span> <span class="text--micro">icon--point-right</span>
+      </li>
+      <li>
+        <span class="icon--point-down"></span> <span class="text--micro">icon--point-down</span>
+      </li>
+      <li>
+        <span class="icon--point-left"></span> <span class="text--micro">icon--point-left</span>
+      </li>
+      <li>
+        <span class="icon--warning"></span> <span class="text--micro">icon--warning</span>
+      </li>
+      <li>
+        <span class="icon--notification"></span> <span class="text--micro">icon--notification</span>
+      </li>
+      <li>
+        <span class="icon--question"></span> <span class="text--micro">icon--question</span>
+      </li>
+      <li>
+        <span class="icon--info"></span> <span class="text--micro">icon--info</span>
+      </li>
+      <li>
+        <span class="icon--info2"></span> <span class="text--micro">icon--info2</span>
+      </li>
+      <li>
+        <span class="icon--blocked"></span> <span class="text--micro">icon--blocked</span>
+      </li>
+      <li>
+        <span class="icon--cancel-circle"></span> <span class="text--micro">icon--cancel-circle</span>
+      </li>
+      <li>
+        <span class="icon--checkmark-circle"></span> <span class="text--micro">icon--checkmark-circle</span>
+      </li>
+      <li>
+        <span class="icon--spam"></span> <span class="text--micro">icon--spam</span>
+      </li>
+      <li>
+        <span class="icon--close"></span> <span class="text--micro">icon--close</span>
+      </li>
+      <li>
+        <span class="icon--checkmark"></span> <span class="text--micro">icon--checkmark</span>
+      </li>
+      <li>
+        <span class="icon--checkmark2"></span> <span class="text--micro">icon--checkmark2</span>
+      </li>
+      <li>
+        <span class="icon--spell-check"></span> <span class="text--micro">icon--spell-check</span>
+      </li>
+      <li>
+        <span class="icon--minus"></span> <span class="text--micro">icon--minus</span>
+      </li>
+      <li>
+        <span class="icon--plus"></span> <span class="text--micro">icon--plus</span>
+      </li>
+      <li>
+        <span class="icon--enter"></span> <span class="text--micro">icon--enter</span>
+      </li>
+      <li>
+        <span class="icon--exit"></span> <span class="text--micro">icon--exit</span>
+      </li>
+      <li>
+        <span class="icon--play2"></span> <span class="text--micro">icon--play2</span>
+      </li>
+      <li>
+        <span class="icon--pause"></span> <span class="text--micro">icon--pause</span>
+      </li>
+      <li>
+        <span class="icon--stop"></span> <span class="text--micro">icon--stop</span>
+      </li>
+      <li>
+        <span class="icon--backward"></span> <span class="text--micro">icon--backward</span>
+      </li>
+      <li>
+        <span class="icon--forward2"></span> <span class="text--micro">icon--forward2</span>
+      </li>
+      <li>
+        <span class="icon--play3"></span> <span class="text--micro">icon--play3</span>
+      </li>
+      <li>
+        <span class="icon--pause2"></span> <span class="text--micro">icon--pause2</span>
+      </li>
+      <li>
+        <span class="icon--stop2"></span> <span class="text--micro">icon--stop2</span>
+      </li>
+      <li>
+        <span class="icon--backward2"></span> <span class="text--micro">icon--backward2</span>
+      </li>
+      <li>
+        <span class="icon--forward3"></span> <span class="text--micro">icon--forward3</span>
+      </li>
+      <li>
+        <span class="icon--first"></span> <span class="text--micro">icon--first</span>
+      </li>
+      <li>
+        <span class="icon--last"></span> <span class="text--micro">icon--last</span>
+      </li>
+      <li>
+        <span class="icon--previous"></span> <span class="text--micro">icon--previous</span>
+      </li>
+      <li>
+        <span class="icon--next"></span> <span class="text--micro">icon--next</span>
+      </li>
+      <li>
+        <span class="icon--eject"></span> <span class="text--micro">icon--eject</span>
+      </li>
+      <li>
+        <span class="icon--volume-high"></span> <span class="text--micro">icon--volume-high</span>
+      </li>
+      <li>
+        <span class="icon--volume-medium"></span> <span class="text--micro">icon--volume-medium</span>
+      </li>
+      <li>
+        <span class="icon--volume-low"></span> <span class="text--micro">icon--volume-low</span>
+      </li>
+      <li>
+        <span class="icon--volume-mute"></span> <span class="text--micro">icon--volume-mute</span>
+      </li>
+      <li>
+        <span class="icon--volume-mute2"></span> <span class="text--micro">icon--volume-mute2</span>
+      </li>
+      <li>
+        <span class="icon--volume-increase"></span> <span class="text--micro">icon--volume-increase</span>
+      </li>
+      <li>
+        <span class="icon--volume-decrease"></span> <span class="text--micro">icon--volume-decrease</span>
+      </li>
+      <li>
+        <span class="icon--loop"></span> <span class="text--micro">icon--loop</span>
+      </li>
+      <li>
+        <span class="icon--loop2"></span> <span class="text--micro">icon--loop2</span>
+      </li>
+      <li>
+        <span class="icon--loop3"></span> <span class="text--micro">icon--loop3</span>
+      </li>
+      <li>
+        <span class="icon--shuffle"></span> <span class="text--micro">icon--shuffle</span>
+      </li>
+      <li>
+        <span class="icon--arrow-up-left"></span> <span class="text--micro">icon--arrow-up-left</span>
+      </li>
+      <li>
+        <span class="icon--arrow-up"></span> <span class="text--micro">icon--arrow-up</span>
+      </li>
+      <li>
+        <span class="icon--arrow-up-right"></span> <span class="text--micro">icon--arrow-up-right</span>
+      </li>
+      <li>
+        <span class="icon--arrow-right"></span> <span class="text--micro">icon--arrow-right</span>
+      </li>
+      <li>
+        <span class="icon--arrow-down-right"></span> <span class="text--micro">icon--arrow-down-right</span>
+      </li>
+      <li>
+        <span class="icon--arrow-down"></span> <span class="text--micro">icon--arrow-down</span>
+      </li>
+      <li>
+        <span class="icon--arrow-down-left"></span> <span class="text--micro">icon--arrow-down-left</span>
+      </li>
+      <li>
+        <span class="icon--arrow-left"></span> <span class="text--micro">icon--arrow-left</span>
+      </li>
+      <li>
+        <span class="icon--arrow-up-left2"></span> <span class="text--micro">icon--arrow-up-left2</span>
+      </li>
+      <li>
+        <span class="icon--arrow-up2"></span> <span class="text--micro">icon--arrow-up2</span>
+      </li>
+      <li>
+        <span class="icon--arrow-up-right2"></span> <span class="text--micro">icon--arrow-up-right2</span>
+      </li>
+      <li>
+        <span class="icon--arrow-right2"></span> <span class="text--micro">icon--arrow-right2</span>
+      </li>
+      <li>
+        <span class="icon--arrow-down-right2"></span> <span class="text--micro">icon--arrow-down-right2</span>
+      </li>
+      <li>
+        <span class="icon--arrow-down2"></span> <span class="text--micro">icon--arrow-down2</span>
+      </li>
+      <li>
+        <span class="icon--arrow-down-left2"></span> <span class="text--micro">icon--arrow-down-left2</span>
+      </li>
+      <li>
+        <span class="icon--arrow-left2"></span> <span class="text--micro">icon--arrow-left2</span>
+      </li>
+      <li>
+        <span class="icon--arrow-up-left3"></span> <span class="text--micro">icon--arrow-up-left3</span>
+      </li>
+      <li>
+        <span class="icon--arrow-up3"></span> <span class="text--micro">icon--arrow-up3</span>
+      </li>
+      <li>
+        <span class="icon--arrow-up-right3"></span> <span class="text--micro">icon--arrow-up-right3</span>
+      </li>
+      <li>
+        <span class="icon--arrow-right3"></span> <span class="text--micro">icon--arrow-right3</span>
+      </li>
+      <li>
+        <span class="icon--arrow-down-right3"></span> <span class="text--micro">icon--arrow-down-right3</span>
+      </li>
+      <li>
+        <span class="icon--arrow-down3"></span> <span class="text--micro">icon--arrow-down3</span>
+      </li>
+      <li>
+        <span class="icon--arrow-down-left3"></span> <span class="text--micro">icon--arrow-down-left3</span>
+      </li>
+      <li>
+        <span class="icon--arrow-left3"></span> <span class="text--micro">icon--arrow-left3</span>
+      </li>
+      <li>
+        <span class="icon--tab"></span> <span class="text--micro">icon--tab</span>
+      </li>
+      <li>
+        <span class="icon--checkbox-checked"></span> <span class="text--micro">icon--checkbox-checked</span>
+      </li>
+      <li>
+        <span class="icon--checkbox-unchecked"></span> <span class="text--micro">icon--checkbox-unchecked</span>
+      </li>
+      <li>
+        <span class="icon--checkbox-partial"></span> <span class="text--micro">icon--checkbox-partial</span>
+      </li>
+      <li>
+        <span class="icon--radio-checked"></span> <span class="text--micro">icon--radio-checked</span>
+      </li>
+      <li>
+        <span class="icon--radio-unchecked"></span> <span class="text--micro">icon--radio-unchecked</span>
+      </li>
+      <li>
+        <span class="icon--crop"></span> <span class="text--micro">icon--crop</span>
+      </li>
+      <li>
+        <span class="icon--scissors"></span> <span class="text--micro">icon--scissors</span>
+      </li>
+      <li>
+        <span class="icon--filter"></span> <span class="text--micro">icon--filter</span>
+      </li>
+      <li>
+        <span class="icon--filter2"></span> <span class="text--micro">icon--filter2</span>
+      </li>
+      <li>
+        <span class="icon--font"></span> <span class="text--micro">icon--font</span>
+      </li>
+      <li>
+        <span class="icon--text-height"></span> <span class="text--micro">icon--text-height</span>
+      </li>
+      <li>
+        <span class="icon--text-width"></span> <span class="text--micro">icon--text-width</span>
+      </li>
+      <li>
+        <span class="icon--bold"></span> <span class="text--micro">icon--bold</span>
+      </li>
+      <li>
+        <span class="icon--underline"></span> <span class="text--micro">icon--underline</span>
+      </li>
+      <li>
+        <span class="icon--italic"></span> <span class="text--micro">icon--italic</span>
+      </li>
+      <li>
+        <span class="icon--strikethrough"></span> <span class="text--micro">icon--strikethrough</span>
+      </li>
+      <li>
+        <span class="icon--omega"></span> <span class="text--micro">icon--omega</span>
+      </li>
+      <li>
+        <span class="icon--sigma"></span> <span class="text--micro">icon--sigma</span>
+      </li>
+      <li>
+        <span class="icon--table"></span> <span class="text--micro">icon--table</span>
+      </li>
+      <li>
+        <span class="icon--table2"></span> <span class="text--micro">icon--table2</span>
+      </li>
+      <li>
+        <span class="icon--insert-template"></span> <span class="text--micro">icon--insert-template</span>
+      </li>
+      <li>
+        <span class="icon--pilcrow"></span> <span class="text--micro">icon--pilcrow</span>
+      </li>
+      <li>
+        <span class="icon--lefttoright"></span> <span class="text--micro">icon--lefttoright</span>
+      </li>
+      <li>
+        <span class="icon--righttoleft"></span> <span class="text--micro">icon--righttoleft</span>
+      </li>
+      <li>
+        <span class="icon--paragraph-left"></span> <span class="text--micro">icon--paragraph-left</span>
+      </li>
+      <li>
+        <span class="icon--paragraph-center"></span> <span class="text--micro">icon--paragraph-center</span>
+      </li>
+      <li>
+        <span class="icon--paragraph-right"></span> <span class="text--micro">icon--paragraph-right</span>
+      </li>
+      <li>
+        <span class="icon--paragraph-justify"></span> <span class="text--micro">icon--paragraph-justify</span>
+      </li>
+      <li>
+        <span class="icon--paragraph-left2"></span> <span class="text--micro">icon--paragraph-left2</span>
+      </li>
+      <li>
+        <span class="icon--paragraph-center2"></span> <span class="text--micro">icon--paragraph-center2</span>
+      </li>
+      <li>
+        <span class="icon--paragraph-right2"></span> <span class="text--micro">icon--paragraph-right2</span>
+      </li>
+      <li>
+        <span class="icon--paragraph-justify2"></span> <span class="text--micro">icon--paragraph-justify2</span>
+      </li>
+      <li>
+        <span class="icon--indent-increase"></span> <span class="text--micro">icon--indent-increase</span>
+      </li>
+      <li>
+        <span class="icon--indent-decrease"></span> <span class="text--micro">icon--indent-decrease</span>
+      </li>
+      <li>
+        <span class="icon--newtab"></span> <span class="text--micro">icon--newtab</span>
+      </li>
+      <li>
+        <span class="icon--embed"></span> <span class="text--micro">icon--embed</span>
+      </li>
+      <li>
+        <span class="icon--code"></span> <span class="text--micro">icon--code</span>
+      </li>
+      <li>
+        <span class="icon--console"></span> <span class="text--micro">icon--console</span>
+      </li>
+      <li>
+        <span class="icon--share"></span> <span class="text--micro">icon--share</span>
+      </li>
+      <li>
+        <span class="icon--mail"></span> <span class="text--micro">icon--mail</span>
+      </li>
+      <li>
+        <span class="icon--mail2"></span> <span class="text--micro">icon--mail2</span>
+      </li>
+      <li>
+        <span class="icon--mail3"></span> <span class="text--micro">icon--mail3</span>
+      </li>
+      <li>
+        <span class="icon--mail4"></span> <span class="text--micro">icon--mail4</span>
+      </li>
+      <li>
+        <span class="icon--google"></span> <span class="text--micro">icon--google</span>
+      </li>
+      <li>
+        <span class="icon--googleplus"></span> <span class="text--micro">icon--googleplus</span>
+      </li>
+      <li>
+        <span class="icon--googleplus2"></span> <span class="text--micro">icon--googleplus2</span>
+      </li>
+      <li>
+        <span class="icon--googleplus3"></span> <span class="text--micro">icon--googleplus3</span>
+      </li>
+      <li>
+        <span class="icon--googleplus4"></span> <span class="text--micro">icon--googleplus4</span>
+      </li>
+      <li>
+        <span class="icon--google-drive"></span> <span class="text--micro">icon--google-drive</span>
+      </li>
+      <li>
+        <span class="icon--facebook"></span> <span class="text--micro">icon--facebook</span>
+      </li>
+      <li>
+        <span class="icon--facebook2"></span> <span class="text--micro">icon--facebook2</span>
+      </li>
+      <li>
+        <span class="icon--facebook3"></span> <span class="text--micro">icon--facebook3</span>
+      </li>
+      <li>
+        <span class="icon--instagram"></span> <span class="text--micro">icon--instagram</span>
+      </li>
+      <li>
+        <span class="icon--twitter"></span> <span class="text--micro">icon--twitter</span>
+      </li>
+      <li>
+        <span class="icon--twitter2"></span> <span class="text--micro">icon--twitter2</span>
+      </li>
+      <li>
+        <span class="icon--twitter3"></span> <span class="text--micro">icon--twitter3</span>
+      </li>
+      <li>
+        <span class="icon--feed2"></span> <span class="text--micro">icon--feed2</span>
+      </li>
+      <li>
+        <span class="icon--feed3"></span> <span class="text--micro">icon--feed3</span>
+      </li>
+      <li>
+        <span class="icon--feed4"></span> <span class="text--micro">icon--feed4</span>
+      </li>
+      <li>
+        <span class="icon--youtube"></span> <span class="text--micro">icon--youtube</span>
+      </li>
+      <li>
+        <span class="icon--youtube2"></span> <span class="text--micro">icon--youtube2</span>
+      </li>
+      <li>
+        <span class="icon--vimeo"></span> <span class="text--micro">icon--vimeo</span>
+      </li>
+      <li>
+        <span class="icon--vimeo2"></span> <span class="text--micro">icon--vimeo2</span>
+      </li>
+      <li>
+        <span class="icon--vimeo3"></span> <span class="text--micro">icon--vimeo3</span>
+      </li>
+      <li>
+        <span class="icon--lanyrd"></span> <span class="text--micro">icon--lanyrd</span>
+      </li>
+      <li>
+        <span class="icon--flickr"></span> <span class="text--micro">icon--flickr</span>
+      </li>
+      <li>
+        <span class="icon--flickr2"></span> <span class="text--micro">icon--flickr2</span>
+      </li>
+      <li>
+        <span class="icon--flickr3"></span> <span class="text--micro">icon--flickr3</span>
+      </li>
+      <li>
+        <span class="icon--flickr4"></span> <span class="text--micro">icon--flickr4</span>
+      </li>
+      <li>
+        <span class="icon--picassa"></span> <span class="text--micro">icon--picassa</span>
+      </li>
+      <li>
+        <span class="icon--picassa2"></span> <span class="text--micro">icon--picassa2</span>
+      </li>
+      <li>
+        <span class="icon--dribbble"></span> <span class="text--micro">icon--dribbble</span>
+      </li>
+      <li>
+        <span class="icon--dribbble2"></span> <span class="text--micro">icon--dribbble2</span>
+      </li>
+      <li>
+        <span class="icon--dribbble3"></span> <span class="text--micro">icon--dribbble3</span>
+      </li>
+      <li>
+        <span class="icon--forrst"></span> <span class="text--micro">icon--forrst</span>
+      </li>
+      <li>
+        <span class="icon--forrst2"></span> <span class="text--micro">icon--forrst2</span>
+      </li>
+      <li>
+        <span class="icon--deviantart"></span> <span class="text--micro">icon--deviantart</span>
+      </li>
+      <li>
+        <span class="icon--deviantart2"></span> <span class="text--micro">icon--deviantart2</span>
+      </li>
+      <li>
+        <span class="icon--steam"></span> <span class="text--micro">icon--steam</span>
+      </li>
+      <li>
+        <span class="icon--steam2"></span> <span class="text--micro">icon--steam2</span>
+      </li>
+      <li>
+        <span class="icon--github"></span> <span class="text--micro">icon--github</span>
+      </li>
+      <li>
+        <span class="icon--github2"></span> <span class="text--micro">icon--github2</span>
+      </li>
+      <li>
+        <span class="icon--github3"></span> <span class="text--micro">icon--github3</span>
+      </li>
+      <li>
+        <span class="icon--github4"></span> <span class="text--micro">icon--github4</span>
+      </li>
+      <li>
+        <span class="icon--github5"></span> <span class="text--micro">icon--github5</span>
+      </li>
+      <li>
+        <span class="icon--wordpress"></span> <span class="text--micro">icon--wordpress</span>
+      </li>
+      <li>
+        <span class="icon--wordpress2"></span> <span class="text--micro">icon--wordpress2</span>
+      </li>
+      <li>
+        <span class="icon--joomla"></span> <span class="text--micro">icon--joomla</span>
+      </li>
+      <li>
+        <span class="icon--blogger"></span> <span class="text--micro">icon--blogger</span>
+      </li>
+      <li>
+        <span class="icon--blogger2"></span> <span class="text--micro">icon--blogger2</span>
+      </li>
+      <li>
+        <span class="icon--tumblr"></span> <span class="text--micro">icon--tumblr</span>
+      </li>
+      <li>
+        <span class="icon--tumblr2"></span> <span class="text--micro">icon--tumblr2</span>
+      </li>
+      <li>
+        <span class="icon--yahoo"></span> <span class="text--micro">icon--yahoo</span>
+      </li>
+      <li>
+        <span class="icon--tux"></span> <span class="text--micro">icon--tux</span>
+      </li>
+      <li>
+        <span class="icon--apple"></span> <span class="text--micro">icon--apple</span>
+      </li>
+      <li>
+        <span class="icon--finder"></span> <span class="text--micro">icon--finder</span>
+      </li>
+      <li>
+        <span class="icon--android"></span> <span class="text--micro">icon--android</span>
+      </li>
+      <li>
+        <span class="icon--windows"></span> <span class="text--micro">icon--windows</span>
+      </li>
+      <li>
+        <span class="icon--windows8"></span> <span class="text--micro">icon--windows8</span>
+      </li>
+      <li>
+        <span class="icon--soundcloud"></span> <span class="text--micro">icon--soundcloud</span>
+      </li>
+      <li>
+        <span class="icon--soundcloud2"></span> <span class="text--micro">icon--soundcloud2</span>
+      </li>
+      <li>
+        <span class="icon--skype"></span> <span class="text--micro">icon--skype</span>
+      </li>
+      <li>
+        <span class="icon--reddit"></span> <span class="text--micro">icon--reddit</span>
+      </li>
+      <li>
+        <span class="icon--linkedin"></span> <span class="text--micro">icon--linkedin</span>
+      </li>
+      <li>
+        <span class="icon--lastfm"></span> <span class="text--micro">icon--lastfm</span>
+      </li>
+      <li>
+        <span class="icon--lastfm2"></span> <span class="text--micro">icon--lastfm2</span>
+      </li>
+      <li>
+        <span class="icon--delicious"></span> <span class="text--micro">icon--delicious</span>
+      </li>
+      <li>
+        <span class="icon--stumbleupon"></span> <span class="text--micro">icon--stumbleupon</span>
+      </li>
+      <li>
+        <span class="icon--stumbleupon2"></span> <span class="text--micro">icon--stumbleupon2</span>
+      </li>
+      <li>
+        <span class="icon--stackoverflow"></span> <span class="text--micro">icon--stackoverflow</span>
+      </li>
+      <li>
+        <span class="icon--pinterest"></span> <span class="text--micro">icon--pinterest</span>
+      </li>
+      <li>
+        <span class="icon--pinterest2"></span> <span class="text--micro">icon--pinterest2</span>
+      </li>
+      <li>
+        <span class="icon--xing"></span> <span class="text--micro">icon--xing</span>
+      </li>
+      <li>
+        <span class="icon--xing2"></span> <span class="text--micro">icon--xing2</span>
+      </li>
+      <li>
+        <span class="icon--flattr"></span> <span class="text--micro">icon--flattr</span>
+      </li>
+      <li>
+        <span class="icon--foursquare"></span> <span class="text--micro">icon--foursquare</span>
+      </li>
+      <li>
+        <span class="icon--foursquare2"></span> <span class="text--micro">icon--foursquare2</span>
+      </li>
+      <li>
+        <span class="icon--paypal"></span> <span class="text--micro">icon--paypal</span>
+      </li>
+      <li>
+        <span class="icon--paypal2"></span> <span class="text--micro">icon--paypal2</span>
+      </li>
+      <li>
+        <span class="icon--paypal3"></span> <span class="text--micro">icon--paypal3</span>
+      </li>
+      <li>
+        <span class="icon--yelp"></span> <span class="text--micro">icon--yelp</span>
+      </li>
+      <li>
+        <span class="icon--libreoffice"></span> <span class="text--micro">icon--libreoffice</span>
+      </li>
+      <li>
+        <span class="icon--file-pdf"></span> <span class="text--micro">icon--file-pdf</span>
+      </li>
+      <li>
+        <span class="icon--file-openoffice"></span> <span class="text--micro">icon--file-openoffice</span>
+      </li>
+      <li>
+        <span class="icon--file-word"></span> <span class="text--micro">icon--file-word</span>
+      </li>
+      <li>
+        <span class="icon--file-excel"></span> <span class="text--micro">icon--file-excel</span>
+      </li>
+      <li>
+        <span class="icon--file-zip"></span> <span class="text--micro">icon--file-zip</span>
+      </li>
+      <li>
+        <span class="icon--file-powerpoint"></span> <span class="text--micro">icon--file-powerpoint</span>
+      </li>
+      <li>
+        <span class="icon--file-xml"></span> <span class="text--micro">icon--file-xml</span>
+      </li>
+      <li>
+        <span class="icon--file-css"></span> <span class="text--micro">icon--file-css</span>
+      </li>
+      <li>
+        <span class="icon--html5"></span> <span class="text--micro">icon--html5</span>
+      </li>
+      <li>
+        <span class="icon--html52"></span> <span class="text--micro">icon--html52</span>
+      </li>
+      <li>
+        <span class="icon--css3"></span> <span class="text--micro">icon--css3</span>
+      </li>
+      <li>
+        <span class="icon--chrome"></span> <span class="text--micro">icon--chrome</span>
+      </li>
+      <li>
+        <span class="icon--firefox"></span> <span class="text--micro">icon--firefox</span>
+      </li>
+      <li>
+        <span class="icon--IE"></span> <span class="text--micro">icon--IE</span>
+      </li>
+      <li>
+        <span class="icon--opera"></span> <span class="text--micro">icon--opera</span>
+      </li>
+      <li>
+        <span class="icon--safari"></span> <span class="text--micro">icon--safari</span>
+      </li>
+    </ul>
+
+  </div>
+</body>
+</html>

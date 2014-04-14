@@ -1,0 +1,25 @@
+// Name:         Float
+// Description:  
+//
+// Components:   `float-`
+//
+// Modifier:     `float--left`
+//               `float--right`
+//
+
+@if $use-float == true {
+
+// Float blocks
+[class*='float--'] { 
+  max-width: 100%; 
+}
+
+.float--left { 
+  float: left; 
+}
+
+.float--right { 
+  float: right; 
+}
+
+} // end if

@@ -1,0 +1,90 @@
+// Name:         List
+// Description:  Defines styles for ordered and unordered lists
+//
+// Components:   `list`
+//               `list-disc`
+//
+// Modifier:     `list--line`
+//               `list--striped`
+//               `list--space`
+//               `list--inline`
+//               `list--disc-horz`
+//        
+
+.use-list(@use-list);
+
+.use-list(@list) when (@list = false) {}
+
+.use-list(@list) when (@list = true) {
+
+// unstyled lists
+.list-unstyled {
+  list-style: none;
+  padding: 0;
+  // nested unstyled lists
+  
+  ul {
+    margin: 0;
+    padding-left: @base-spacing-unit;
+    list-style: none;
+  }
+}
+
+.list {
+  &:extend(.list-unstyled);
+}
+
+// list-line
+.list--line > li:nth-child(n+2) {
+  margin-top: @list-spacing;
+  padding-top: @list-spacing;
+  border-top: @list-line-border-width solid @list-line-border;
+}
+
+// list-striped
+.list--striped > li {
+  padding: @list-spacing @list-spacing;
+}
+
+.list--striped > li:nth-of-type(odd) { 
+  background: @list-striped-background; 
+}
+
+// list-space
+.list--space > li:nth-child(n+2) { 
+  margin-top: @base-spacing-unit-half; 
+}
+
+// inline turns list items into inline-block
+.list--inline {
+  &:extend(.list-unstyled);
+  margin-left: -@list-spacing;
+
+  > li {
+    display: inline-block;
+    padding-left: @list-spacing;
+    padding-right: @list-spacing;
+  }
+}
+
+// Horizontal description lists. Defaults to being stacked without any of the below styles applied, until `@bp-lap`
+.list--disc-horz {
+  dd {
+    &:extend(.clearfix all);
+  }
+
+  @media (min-width: @bp-lap) {
+    dt {
+      .text-overflow();
+      float: left;
+      width: @list-disc-offset - 20;
+      clear: left;
+      text-align: right;
+    }
+    dd {
+      margin-left: @list-disc-offset;
+    }
+  }
+}
+
+} // end if

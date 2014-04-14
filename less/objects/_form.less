@@ -1,0 +1,119 @@
+// Name:         Form
+// Description:  Giving style to normalize form control
+//
+// Components:   `input-`
+//
+// Modifier:     `input--label`
+//               `input-replacement--`
+//               `input--radio`
+//               `input--checkbox`
+//
+
+.use-form(@use-form);
+
+.use-form(@form) when (@form = false) {}
+
+.use-form(@form) when (@form = true) {
+
+// label
+.input--label {  
+  padding-left: @label-spacing;
+  position: relative;
+  top: @label-spacing / 3;
+}
+
+// replce input style
+.input--replacement {
+  background-color: #fff;
+  border: @input-border-width solid @base-ui-color;
+  display: block;
+  height: @input-spacing;
+  position: relative;
+  width: @input-spacing;
+}
+
+.input-replacement--radio {
+  border-radius: 500px;
+}
+
+.input-replacement--checkbox {
+  border-radius: @brand-border-radius;
+  text-align: center;
+}
+
+.input--radio,
+.input--checkbox {
+  span {
+    &:last-child {
+      padding-right: @input-spacing;
+    }
+  }
+}
+
+input {
+  &[type=radio],
+  &[type=checkbox] {
+    display: none;
+    
+    &:checked {
+      + .input--replacement {
+        background-color: @brand-color;
+      }
+    }
+  }
+}
+
+// checkbox
+input {
+  &[type=checkbox] {
+    display: none;
+    position: relative;
+    visibility: hidden;
+
+    &:checked {
+
+      + .input-replacement--checkbox {
+
+        &:after {
+          color: #fff;
+          content: '✔';
+          height: 100%;
+          position: absolute;
+          top: 2px;
+          left: 0;
+          text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+// radio
+input {
+  &[type=radio] {
+    position: relative;
+
+    &:checked {
+
+      + .input-replacement--radio {
+
+        &:after {
+          background-color: #fff;
+          border-radius: 50%;
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+          content: '';
+          height: @input-radio-spacing;
+          margin-top: -@input-radio-spacing / 2;
+          margin-left: -@input-radio-spacing / 2;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: @input-radio-spacing;
+        }
+      }
+    }
+  }
+}
+
+} // end if

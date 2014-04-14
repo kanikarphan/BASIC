@@ -1,0 +1,231 @@
+// Name:         Variables
+// Description:  Defines values as variables to allow for reusability and consistency
+//
+// Component:
+//
+// Modifier:
+//
+
+// Global variables
+
+// Optional abstractions and objects
+
+$use-align:                            true!default;
+$use-brand:                            true!default;
+$use-column:                           true!default;
+$use-float:                            true!default;
+$use-font:                             true!default;
+$use-image:                            true!default;
+$use-margin:                           true!default;
+$use-padding:                          true!default;
+$use-text:                             true!default;
+$use-visibility:                       true!default;
+$use-button:                           true!default;
+$use-caption:                          true!default;
+$use-form:                             true!default;
+$use-heading:                          true!default;
+$use-icons:                            true!default;
+$use-list:                             true!default;
+$use-media:                            true!default;
+$use-modal:                            true!default;
+$use-progress:                         true!default;
+$use-row:                              true!default;
+$use-table:                            true!default;
+$use-print:                            true!default;
+
+// Base
+
+$base-font-size:                       16px!default;
+$base-line-height:                     24px!default;
+$base-spacing-unit:                    30px!default;
+$base-spacing-unit-half:               $base-spacing-unit / 2!default;
+$base-spacing-unit-small:              10px!default;
+$base-line-height-ratio:               $base-line-height / $base-font-size!default;
+$base-img-path:                        '../img'!default;
+$base-font-path:                       '../fonts'!default;
+$base-font-openSans-light:             'OpenSans Light'; // placeholder for a webfont
+$base-font-openSans-semibold:          'OpenSans Semibold'; // placeholder for a webfont
+$base-font-icons:                      'Basic Icons';
+$base-font-family:                     $base-font-openSans-light;
+$base-font-sans:                       'Helvetica Neue', Helvetica, Arial, sans-serif;
+$base-font-bold:                       $base-font-openSans-semibold;
+$base-alpha-color:                     #74badd!default;
+$base-beta-color:                      #5bcf80!default;
+$base-gamma-color:                     #f8cb30!default;
+$base-delta-color:                     #e25e5b!default;
+$base-ui-color:                        #ddd!default; // default color for object, borders, & etc.
+$base-text-color:                      #222!default; // default color for text.
+$base-body-font-size:                  $base-font-size!default;
+$base-body-background:                 #fff!default;
+$base-body-font-family:                $base-font-family, $base-font-sans!default;
+$base-body-font-weight:                normal!default;
+$base-body-color:                      $base-text-color!default;
+$base-link-color:                      #74badd!default;
+$base-link-text-decoration:            none!default;
+$base-link-hover-color:                #059!default;
+$base-link-hover-text-decoration:      none!default;
+$base-em-color:                        #d05!default;
+$base-ins-background:                  #ffa!default;
+$base-ins-color:                       $base-text-color!default;
+$base-mark-background:                 #ffa!default;
+$base-mark-color:                      $base-text-color!default;
+$base-selection-background:            $base-alpha-color!default;
+$base-selection-color:                 #fff!default;
+$base-hr-color:                        $base-ui-color!default;
+$base-hr-border-width:                 1px!default;
+$base-blockquote-color:                $base-ui-color!default;
+$base-blockquote-border-width:         5px!default;
+$base-blockquote-small-color:          $base-ui-color!default;
+$base-blockquote-font-size:            $base-font-size!default;
+$base-code-color:                      #666!default;
+$base-code-font-size:                  12px!default;
+$base-code-font-family:                Consolas, monospace, serif!default;
+$base-pre-padding:                     10px!default;
+$base-pre-background:                  $base-ui-color!default;
+$base-pre-color:                       $base-text-color!default;
+$base-pre-font-size:                   12px!default;
+
+// Brand identity
+
+$brand-color:                          $base-alpha-color!default;
+$brand-face:                           $base-font-family, $base-font-sans!default;
+$brand-border-radius:                  4px!default;
+
+// Breakpoints
+
+$bp-palm:                              480px!default;
+$bp-lap:                               768px!default;
+$bp-desk:                              992px!default;
+$bp-huge:                              1200px!default;
+$bp-tiny-max:                          ($bp-palm - 1)!default;
+$bp-palm-max:                          ($bp-lap - 1)!default;
+$bp-lap-max:                           ($bp-desk - 1)!default;
+$bp-desk-max:                          ($bp-huge - 1)!default;
+
+// Column
+
+$column-spacing-small:                 $base-spacing-unit-small!default;
+$column-spacing:                       $base-spacing-unit-half!default;
+$column-spacing-large:                 $base-spacing-unit!default;
+$column-gutter-small:                  $column-spacing-small!default;
+$column-gutter:                        $column-spacing!default;
+$column-gutter-large:                  $column-spacing-large!default;
+$column-divider-color:                 $base-ui-color!default;
+$column-divider-border-width:          1px!default;
+
+// Cubic bezier transitions
+
+$cubic-bezier-ease:                    cubic-bezier(0.25, 0.1, 0.25, 1)!default;
+$cubic-bezier-linear:                  cubic-bezier(0, 0, 1, 1)!default;
+$cubic-bezier-ease-in:                 cubic-bezier(0.42, 0, 1, 1)!default;
+$cubic-bezier-ease-out:                cubic-bezier(0, 0, 0.58, 1)!default;
+$cubic-bezier-ease-in-out:             cubic-bezier(0.42, 0, 0.58, 1)!default;
+
+// Font sizes
+
+$font-giga-size:                       96px!default;
+$font-mega-size:                       72px!default;
+$font-kilo-size:                       48px!default;
+$font-milli-size:                      14px!default;
+$font-micro-size:                      12px!default;
+$font-nano-size:                       10px!default;
+$font-pico-size:                       8px!default;
+
+// Image
+$image-border-spacing:                 4px!default;
+$image-border-color:                   #e5e5e5!default;
+$image-border-hover-color:             #b2b2b2!default;
+
+// Margin
+
+$margin-spacing:                       $base-spacing-unit-half!default;
+$margin-spacing-large:                 $base-spacing-unit!default;
+$margin-spacing-small:                 $base-spacing-unit-small!default;
+
+// Objects variables
+
+// Button
+
+$button-spacing:                       14px!default;
+$button-large-spacing:                 20px!default;
+$button-small-spacing:                 10px!default;
+$button-border-width:                  2px!default;
+
+// caption
+
+$caption-color:                        #fff!default;
+$caption-background:                   rgba(0, 0, 0, 0.3)!default;
+$caption-spacing:                      $base-spacing-unit-half!default;
+
+// Form
+
+$label-spacing:                        $base-spacing-unit-small!default;
+$input-spacing:                        $base-spacing-unit!default;
+$input-radio-spacing:                  60%!default;
+$input-border-width:                   1px!default;
+
+// Heading
+
+$heading-font-family:                  $base-font-bold, $base-font-sans!default;
+$heading-font-weight:                  500!default;
+$heading-color:                        $base-text-color!default;
+$heading-small-color:                  #999!default;
+$heading-text-transform:               none!default;
+$heading-margin-top:                   25px!default;
+$h1-font-size:                         36px!default; // alpha
+$h2-font-size:                         30px!default; // beta
+$h3-font-size:                         24px!default; // gamma
+$h4-font-size:                         20px!default; // delta
+$h5-font-size:                         16px!default; // epsilon
+$h6-font-size:                         14px!default; // zeta
+
+// List
+
+$list-spacing:                         5px!default;
+$list-line-border:                     $base-ui-color!default;
+$list-line-border-width:               1px!default;
+$list-striped-background:              #f5f5f5!default;
+$list-disc-offset:                     180px!default;
+
+// Media 
+
+$media-padding:                        4px!default;
+$media-border:                         $base-ui-color!default;
+$media-border-width:                   1px!default;
+$media-background:                     #fff!default;
+$media-hover-border:                   #aaa!default;
+$media-hover-background:               #fff!default;
+
+$media-caption-padding:                $media-padding!default;
+$media-caption-color:                  #444!default;
+
+$media-tiny-width:                     150px!default;
+$media-small-width:                    200px!default;
+$media-medium-width:                   300px!default;
+$media-large-width:                    400px!default;
+
+// Modal
+
+$modal-background:                     rgba(0, 0, 0, 0.8)!default;
+$modal-z-index:                        10!default;
+$modal-header-border-width:            1px!default;
+$modal-footer-border-width:            1px!default;
+
+// Progress
+
+$progress-spacing-small:               20px!default;
+$progress-spacing:                     30px!default;
+$progress-spacing-large:               40px!default;
+
+// Row
+$row-max-width:                        980px!default;
+$row-padding:                          $column-spacing!default;
+$row-max-width-large:                  1200px!default;
+$row-padding-large:                    $column-spacing-large!default;
+
+// Table 
+
+$table-background-color:               #f5f5f5!default;
+$table-border-width:                   1px!default;
+$table-responsive-tr-spacing:          $base-spacing-unit-half!default;
+$table-responsive-td-spacing:          $base-spacing-unit-small!default;

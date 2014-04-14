@@ -1,0 +1,89 @@
+// Name:            caption
+// Description:     Defines styles for element caption
+//
+// Component:       `caption`
+//
+// Sub-objects:     `caption__full`
+//                  `caption__bottom`
+//                  `caption__top`
+//                  `caption--fade`
+//
+
+@if $use-caption == true {
+
+// caption
+.caption {
+  display: inline-block;
+  max-width: 100%;
+  position: relative;
+}
+
+// caption__area
+.caption__full {
+  @include transition(opacity 0.3s $cubic-bezier-ease-in);
+  background: $caption-background;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  &:not(:empty) {
+    font-size: 0;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+  }
+}
+
+.caption__content {
+  @include font-size($base-font-size, false);
+  color: $caption-color;
+  display: inline-block;
+  padding: 0 $caption-spacing;
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+}
+
+%caption-common {
+  @include transition(opacity 0.3s $cubic-bezier-ease-in);
+  background: $caption-background;
+  color: $caption-color;
+  left: 0;
+  padding: $caption-spacing;
+  position: absolute;
+  right: 0;
+}
+
+.caption__bottom {
+  @extend %caption-common;
+  bottom: 0;
+}
+
+.caption__top {
+  @extend %caption-common;
+  top: 0;
+}
+
+.caption--fade {
+  .caption__full,
+  .caption__bottom,
+  .caption__top {
+    opacity: 0;
+  }
+
+  &:hover {
+    .caption__full,
+    .caption__bottom,
+    .caption__top {
+      opacity: 1;
+    }
+  }
+}
+
+} // end if

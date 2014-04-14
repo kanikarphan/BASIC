@@ -1,0 +1,17 @@
+// Name:         Font
+// Description:  Webfonts files name needs to have `-webfont` suffix because we're using Font Squirrel webfont generator.
+//
+// Components:   
+//
+// Modifier:
+//
+
+@if $use-font == true {
+
+@include webfont('Basic Icons', 'Basic-Icons-webfont');
+
+@include webfont('OpenSans Light', 'OpenSans-Light-webfont');
+
+@include webfont('OpenSans Semibold', 'OpenSans-Semibold-webfont');
+
+} // end if

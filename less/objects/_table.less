@@ -1,0 +1,105 @@
+// Name:         Table
+// Description:  Provides a responsive, fluid and nestable column
+//
+// Components:   `table`
+//
+// Modifier:     
+//
+
+.use-table(@use-table);
+
+.use-table(@table) when (@table = false) {}
+
+.use-table(@table) when (@table = true) {
+
+table {
+  width: 100%;
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 0;
+  }
+  
+  @media (min-width: @bp-lap) {
+    table-layout: fixed;
+  }
+}
+
+thead {
+  background-color: @table-background-color;
+  display: none;
+  text-transform: uppercase;
+
+  @media (min-width: @bp-lap) {
+    display: table-header-group;
+  }
+}
+
+td {
+  @media (min-width: @bp-lap) {
+    border: @table-border-width solid @base-ui-color;
+    padding: 16px;
+  }
+}
+
+.table {
+  border-right: @table-border-width solid @base-ui-color;
+  border-bottom: @table-border-width solid @base-ui-color;
+  border-left: @table-border-width solid @base-ui-color;
+
+  @media (min-width: @bp-lap) {
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+  }
+
+  tr {
+    margin-bottom: @table-responsive-tr-spacing;
+
+    @media (min-width: @bp-lap) {
+      display: table-row;
+      margin-bottom: 0;
+    }
+    
+  }
+
+  td {
+    border-top: @table-border-width solid @base-ui-color;
+    display: block;
+    padding: @table-responsive-td-spacing @table-responsive-td-spacing @table-responsive-td-spacing 50%;
+    position: relative;
+
+    &:first-child {
+      background-color: @table-background-color;
+
+      @media (min-width: @bp-lap) {
+        background-color: transparent;
+      }
+    }
+    
+    &:before {
+      content: attr(data-label);
+      display: block;
+      position: absolute;
+      left: @table-responsive-td-spacing;
+      width: 50%;
+
+      @media (min-width: @bp-lap) {
+        content: '';
+        display: none;
+      }
+    }
+    
+    @media (min-width: @bp-lap) {
+      border: @table-border-width solid @base-ui-color;
+      display: table-cell;
+      padding: @table-responsive-tr-spacing;
+    }
+  }
+}
+
+} // end if

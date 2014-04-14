@@ -1,0 +1,66 @@
+// Name:         Media
+// Description:  Defines styles for image medias
+//
+// Component:    `media`
+//
+// Modifiers:    `media--tiny`
+//               `media--small`
+//               `media--medium`
+//               `media--large`
+//               `media--expand`
+//
+
+.use-media(@use-media);
+
+.use-media(@media) when (@media = false) {}
+
+.use-media(@media) when (@media = true) {
+
+// media
+.media {
+  background: @media-background;
+  border: @media-border-width solid @media-border;
+  border-radius: @brand-border-radius;
+  display: inline-block;
+  margin: 0;
+  max-width: 100%;
+  padding: @media-padding;
+}
+
+a.media:hover,
+a.media:focus {
+  .box-shadow(0 1px 4px rgba(0, 0, 0, 0.3));
+  background-color: @media-hover-background;
+  border-color: @media-hover-border;
+  outline: none;
+  text-decoration: none;
+}
+
+.media__caption {
+  color: @media-caption-color;
+  padding-top: @media-caption-padding;
+  text-align: center;
+}
+
+.media--tiny { 
+  width: @media-tiny-width; 
+}
+
+.media--small { 
+  width: @media-small-width; 
+}
+
+.media--medium { 
+  width: @media-medium-width; 
+}
+
+.media--large { 
+  width: @media-large-width; 
+}
+
+.media--expand,
+.media--expand > img { 
+  width: 100%; 
+}
+
+} // end if

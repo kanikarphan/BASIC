@@ -1,0 +1,86 @@
+// Name:         List
+// Description:  Defines styles for ordered and unordered lists
+//
+// Components:   `list`
+//               `list-disc`
+//
+// Modifier:     `list--line`
+//               `list--striped`
+//               `list--space`
+//               `list--inline`
+//               `list--disc-horz`
+//        
+
+@if $use-list == true {
+
+// unstyled lists
+%list-unstyled {
+  list-style: none;
+  padding: 0;
+  // nested unstyled lists
+  
+  ul {
+    margin: 0;
+    padding-left: rem($base-spacing-unit);
+    list-style: none;
+  }
+}
+
+.list {
+  @extend %list-unstyled;
+}
+
+// list-line
+.list--line > li:nth-child(n+2) {
+  margin-top: rem($list-spacing);
+  padding-top: rem($list-spacing);
+  border-top: $list-line-border-width solid $list-line-border;
+}
+
+// list-striped
+.list--striped > li {
+  padding: rem($list-spacing) rem($list-spacing);
+}
+
+.list--striped > li:nth-of-type(odd) { 
+  background: $list-striped-background; 
+}
+
+// list-space
+.list--space > li:nth-child(n+2) { 
+  margin-top: rem($base-spacing-unit-half); 
+}
+
+// inline turns list items into inline-block
+.list--inline {
+  @extend %list-unstyled;
+  margin-left: rem(-$list-spacing);
+
+  > li {
+    display: inline-block;
+    padding-left: rem($list-spacing);
+    padding-right: rem($list-spacing);
+  }
+}
+
+// Horizontal description lists. Defaults to being stacked without any of the below styles applied, until `$bp-lap`
+.list--disc-horz {
+  dd {
+    @extend .clearfix;
+  }
+
+  @media (min-width: em($bp-lap)) {
+    dt {
+      float: left;
+      width: rem($list-disc-offset - 20);
+      clear: left;
+      text-align: right;
+      @include text-overflow();
+    }
+    dd {
+      margin-left: rem($list-disc-offset);
+    }
+  }
+}
+
+} // end if

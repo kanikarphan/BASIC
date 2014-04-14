@@ -1,0 +1,125 @@
+// Name:         Visibility
+// Description:  Utility to show and hide element. Classes carry `!important` to guarantee the override.
+//
+// Components:   `hidden`
+//               `visible`
+//               `invisible`
+//               `visible--palm`
+//               `visible--lap`
+//               `visible--desk`
+//               `hidden--palm
+//               `hidden--lap`
+//               `hidden--desk`
+//               `visible--print`
+//               `hidden--print
+//               `visible--portrait`
+//               `visible--landscape`
+//               `hidden--portrait`
+//               `hidden--landscape`
+//
+// Modifier:     
+//
+
+.use-visibility(@use-visibility);
+
+.use-visibility(@visibility) when (@visibility = false) {}
+
+.use-visibility(@visibility) when (@visibility = true) {
+
+// Hide from screenreaders and browsers
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.visible {
+  display: block !important;
+}
+
+.invisible {
+  visibility: hidden !important;
+}
+
+// Desktop and bigger
+@media (min-width: @bp-desk) {
+  .visible--palm { 
+    display: none !important; 
+  }
+
+  .visible--lap { 
+    display: none !important; 
+  }
+
+  .hidden--desk { 
+    display: none !important; 
+  }
+}
+
+// Only tablets portrait
+@media (min-width: @bp-lap) and (max-width: @bp-lap-max) {
+  .visible--palm { 
+    display: none !important; 
+  }
+
+  .visible--desk { 
+    display: none !important; 
+  }
+
+  .hidden--lap { 
+    display: none !important; 
+  }
+}
+
+// Phone landscape and smaller
+@media (max-width: @bp-palm-max) {
+  .hidden--palm { 
+    display: none !important; 
+  }
+
+  .visible--lap { 
+    display: none !important; 
+  }
+
+  .visible--desk { 
+    display: none !important; 
+  }
+}
+
+
+// Print
+.visible--print {
+  display: none !important;
+}
+
+@media print {
+  .visible--print {
+    display: block !important;
+  }
+
+  .hidden--print {
+    display: none !important;
+  }
+}
+
+// Orientation
+@media screen and (orientation: portrait) {
+  .hidden--landscape {
+    display: none !important;
+  }
+
+  .visible--portrait {
+    display: block !important;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .hidden--portrait {
+    display: none !important;
+  }
+
+  .visible--landscape {
+    display: block !important;
+  }
+}
+
+} // end if

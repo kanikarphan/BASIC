@@ -1,0 +1,64 @@
+// Name:         Headings
+// Description:  Class that coresspond to h1-h6 styles 
+//
+// Components:   `heading-`
+//
+// Modifier:     `heading--alpha`
+//               `heading--beta`
+//               `heading--gamma`
+//               `heading--delta`
+//               `heading--epsilon`
+//               `heading--zeta`
+//               `heading-alpha--small`
+//               `heading-beta--small`
+//               `heading-gamma--small*`
+//               `heading-delta--small`
+//               `heading-epsilon--small`
+//               `heading-zeta--small`
+//
+
+.use-heading(@use-heading);
+
+.use-heading(@heading) when (@heading = false) {}
+
+.use-heading(@heading) when (@heading = true) {
+
+// Headings
+.heading--alpha {
+  &:extend(h1);
+}
+
+.heading--beta {
+  &:extend(h2);
+}
+
+.heading--gamma {
+  &:extend(h3);
+}
+
+.heading--delta {
+  &:extend(h4);
+}
+
+.heading--epsilon {
+  &:extend(h5);
+}
+
+.heading--zeta {
+  &:extend(h6);
+}
+
+// Headings small
+.heading-alpha--small,
+.heading-beta--small,
+.heading-gamma--small {
+  &:extend(h1 small);
+}
+
+.heading-delta--small,
+.heading-epsilon--small,
+.heading-zeta--small {
+  &:extend(h4 small);
+}
+
+} // end if

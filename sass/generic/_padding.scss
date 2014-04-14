@@ -1,0 +1,200 @@
+// Name:         Margin
+// Description:  Class to modify elemnts padding
+//
+// Components:   `soft`
+//               `hard`
+//
+// Modifier:     `soft-`
+//               `hard-`
+//
+
+@if $use-padding == true {
+
+// Add/remove paddings
+.soft { 
+  padding: $column-spacing; 
+}
+
+.soft--top { 
+  padding-top: $column-spacing; 
+}
+
+.soft--right { 
+  padding-right: $column-spacing; 
+}
+
+.soft--bottom { 
+  padding-bottom: $column-spacing; 
+}
+
+.soft--left { 
+  padding-left: $column-spacing; 
+}
+
+.soft--ends { 
+  padding-top: $column-spacing; 
+  padding-bottom: $column-spacing; 
+}
+
+.soft--sides { 
+  padding-right: $column-spacing; 
+  padding-left: $column-spacing; 
+}
+
+@media (min-width: $bp-huge) {
+  .soft { 
+    padding: $column-spacing-large; 
+  }
+
+  .soft--top { 
+    padding-top: $column-spacing-large; 
+  }
+
+  .soft--right { 
+    padding-right: $column-spacing-large; 
+  }
+
+  .soft--bottom { 
+    padding-bottom: $column-spacing-large; 
+  }
+
+  .soft--left { 
+    padding-left: $column-spacing-large; 
+  }
+
+  .soft--ends { 
+    padding-top: $column-spacing-large; 
+    padding-bottom: $column-spacing-large; 
+  }
+
+  .soft--sides { 
+    padding-right: $column-spacing-large; 
+    padding-left: $column-spacing-large; 
+  }
+}
+
+.soft--small { 
+  padding: $column-spacing-small; 
+}
+
+.soft-small--top { 
+  padding-top: $column-spacing-small; 
+}
+
+.soft-small--right { 
+  padding-right: $column-spacing-small; 
+}
+
+.soft-small--bottom { 
+  padding-bottom: $column-spacing-small; 
+}
+
+.soft-small--left { 
+  padding-left: $column-spacing-small; 
+}
+
+.soft-small--ends { 
+  padding-top: $column-spacing-small; 
+  padding-bottom: $column-spacing-small; 
+}
+
+.soft-small--sides { 
+  padding-right: $column-spacing-small; 
+  padding-left: $column-spacing-small; 
+}
+
+.hard { 
+  padding: 0; 
+}
+
+.hard--top { 
+  padding-top: 0; 
+}
+
+.hard--right { 
+  padding-right: 0; 
+}
+
+.hard--bottom { 
+  padding-bottom: 0; 
+}
+
+.hard--left { 
+  padding-left: 0; 
+}
+
+.hard--ends { 
+  padding-top: 0;
+  padding-bottom: 0; 
+}
+
+.hard--sides { 
+  padding-right: 0; 
+  padding-left: 0; 
+}
+
+@media (min-width: $bp-lap) {
+  .hard--lap { 
+    padding: 0; 
+  }
+
+  .hard-lap--top { 
+    padding-top: 0; 
+  }
+
+  .hard-lap--right { 
+    padding-right: 0; 
+  }
+
+  .hard-lap--bottom { 
+    padding-bottom: 0; 
+  }
+
+  .hard-lap--left { 
+    padding-left: 0; 
+  }
+
+  .hard-lap--ends { 
+    padding-top: 0;
+    padding-bottom: 0; 
+  }
+
+  .hard-lap--sides { 
+    padding-right: 0; 
+    padding-left: 0; 
+  }
+}
+
+@media (min-width: $bp-desk) {
+  .hard--desk { 
+    padding: 0; 
+  }
+
+  .hard-desk--top { 
+    padding-top: 0; 
+  }
+
+  .hard-desk--right { 
+    padding-right: 0; 
+  }
+
+  .hard-desk--bottom { 
+    padding-bottom: 0; 
+  }
+
+  .hard-desk--left { 
+    padding-left: 0; 
+  }
+
+  .hard-desk--ends { 
+    padding-top: 0;
+    padding-bottom: 0; 
+  }
+
+  .hard-desk--sides { 
+    padding-right: 0; 
+    padding-left: 0; 
+  }
+}
+
+} // end if

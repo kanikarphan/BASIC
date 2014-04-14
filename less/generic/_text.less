@@ -1,0 +1,139 @@
+// Name:         Text
+// Description:  Class to modify text
+//
+// Components:   `text--`
+//
+// Modifier:     `text--hide` 
+//               `text--lead`
+//               `text--giga`
+//               `text--mega*`
+//               `text--kilo`
+//               `text--milli`
+//               `text--micro`
+//               `text--left`
+//               `text--center`
+//               `text--justify`
+//               `text--right`
+//               `text--upper`
+//               `text--lower`
+//
+
+.use-text(@use-text);
+
+.use-text(@text) when (@text = false) {}
+
+.use-text(@text) when (@text = true) {
+
+// Hide text. Image replacment
+.text--hide {
+  background-color: transparent;
+  border: 0;
+  color: transparent;
+  font: ~"0/0" a;
+  text--shadow: none;
+}
+
+// Lead text
+.text--lead {
+  .font-size(floor(@base-font-size * 1.15));
+  margin-bottom: @base-line-height-ratio;
+  font-weight: 200;
+  line-height: @base-line-height-ratio - .1;
+
+  @media (min-width: @bp-palm) {
+    .font-size(floor(@base-font-size * 1.5));
+  }
+}
+
+// Font sizes
+.text--giga {
+  .font-size(@font-giga-size);
+}
+
+.text--mega {
+  .font-size(@font-mega-size);
+}
+
+.text--kilo {
+  .font-size(@font-kilo-size);
+}
+
+.text--milli {
+  .font-size(@font-milli-size);
+}
+
+.text--micro {
+  .font-size(@font-micro-size);
+}
+
+.text--nano {
+  .font-size(@font-nano-size);
+}
+
+.text--pico {
+  .font-size(@font-pico-size);
+}
+
+// Text alignment
+.text--left { 
+  text-align: left; 
+}
+
+.text--center { 
+  text-align: center; 
+}
+
+.text--right { 
+  text-align: right; 
+}
+
+.text--justify { 
+  text-align: justify; 
+}
+
+@media (min-width: @bp-lap) and (max-width: @bp-lap-max) {
+  .text-center--lap { 
+    text-align: center; 
+  }
+}
+
+@media (max-width: @bp-palm-max) {
+  .text-center--palm { 
+    text-align: center; 
+  }
+}
+
+// Text transform
+.text--upper { 
+  text-transform: uppercase;
+}
+
+.text--lower { 
+  text-transform: lower;
+}
+
+// Text wrapping
+.text--break {
+  .hyphen(auto);
+  word-wrap: break-word; // break strings if their length exceeds the width of their container
+}
+
+
+// Font weights
+.text-weight--light { 
+  font-weight: 300; 
+}
+
+.text-weight--normal { 
+  font-weight: 400; 
+}
+
+.text-weight--semibold { 
+  font-weight: 600; 
+}
+
+.text-weight--bold { 
+  font-weight: 900; 
+}
+
+} // end if

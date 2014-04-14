@@ -1,0 +1,87 @@
+// Name:         Alignment
+// Description:  Class to modify alignment of block elements
+//
+// Components:   `align-`
+//
+// Modifier:     `align--left`
+//               `align--right`
+//               `align--center`
+//               `align-lap--left`
+//               `align-lap--right`
+//               `align-vertical`
+//               `align-vertical--middle`
+//               `align-vertical--bottom`
+//
+
+.use-align(@use-align);
+
+.use-align(@align) when (@align = false) {}
+
+.use-align(@align) when (@align = true) {
+
+// Alignment
+[class*='align--'] {
+  display: block;
+  margin-bottom: @base-spacing-unit-half;
+}
+
+.align--left {
+  float: left;
+  margin-right: @base-spacing-unit-half;
+}
+
+.align--right {
+  float: right;
+  margin-left: @base-spacing-unit-half;
+}
+
+.align--center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Tablet and bigger
+@media (min-width: @bp-lap) {
+  .align-lap--left {
+    float: left;
+    margin-bottom: @base-spacing-unit-half;
+    margin-right: @base-spacing-unit-half;
+  }
+
+  .align-lap--right {
+    float: right;
+    margin-bottom: @base-spacing-unit-half;
+    margin-left: @base-spacing-unit-half;
+  }
+
+}
+
+// Vertical alignment
+.align--vertical { 
+  // Remove whitespace between child elements when using `inline-block`
+  .font-size(0.01px); 
+  // `align-vertical` container needs a specific height
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+}
+
+.align-vertical--middle,
+.align-vertical--bottom {
+  display: inline-block;
+  max-width: 100%;
+  .font-size(@base-font-size); // reset whitespace hack
+}
+
+.align-vertical--middle { 
+  vertical-align: middle; 
+}
+
+.align-vertical--bottom { 
+  vertical-align: bottom; 
+}
+
+} // end if

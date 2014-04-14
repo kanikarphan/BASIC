@@ -1,0 +1,200 @@
+// Name:         Margin
+// Description:  Class to modify elemnts margin
+//
+// Components:   `separate`
+//               `flush`
+//
+// Modifier:     `separate-`
+//               `flush-`
+//
+
+@if $use-margin == true {
+
+// Add/remove margins
+.separate { 
+  margin: $column-spacing; 
+}
+
+.separate--top { 
+  margin-top: $column-spacing; 
+}
+
+.separate--right { 
+  margin-right: $column-spacing; 
+}
+
+.separate--bottom { 
+  margin-bottom: $column-spacing; 
+}
+
+.separate--left { 
+  margin-left: $column-spacing; 
+}
+
+.separate--ends { 
+  margin-top: $column-spacing; 
+  margin-bottom: $column-spacing; 
+}
+
+.separate--sides { 
+  margin-right: $column-spacing; 
+  margin-left: $column-spacing; 
+}
+
+@media (min-width: $bp-huge) {
+  .separate { 
+    margin: $column-spacing-large; 
+  }
+
+  .separate--top { 
+    margin-top: $column-spacing-large; 
+  }
+
+  .separate--right { 
+    margin-right: $column-spacing-large; 
+  }
+
+  .separate--bottom { 
+    margin-bottom: $column-spacing-large; 
+  }
+
+  .separate--left { 
+    margin-left: $column-spacing-large; 
+  }
+
+  .separate--ends { 
+    margin-top: $column-spacing-large; 
+    margin-bottom: $column-spacing-large; 
+  }
+
+  .separate--sides { 
+    margin-right: $column-spacing-large; 
+    margin-left: $column-spacing-large; 
+  }
+}
+
+.separate--small { 
+  margin: $column-spacing-small; 
+}
+
+.separate-small--top { 
+  margin-top: $column-spacing-small; 
+}
+
+.separate-small--right { 
+  margin-right: $column-spacing-small; 
+}
+
+.separate-small--bottom { 
+  margin-bottom: $column-spacing-small; 
+}
+
+.separate-small--left { 
+  margin-left: $column-spacing-small; 
+}
+
+.separate-small--ends { 
+  margin-top: $column-spacing-small; 
+  margin-bottom: $column-spacing-small; 
+}
+
+.separate-small--sides { 
+  margin-right: $column-spacing-small; 
+  margin-left: $column-spacing-small; 
+}
+
+.flush { 
+  margin: 0; 
+}
+
+.flush--top { 
+  margin-top: 0; 
+}
+
+.flush--right { 
+  margin-right: 0; 
+}
+
+.flush--bottom { 
+  margin-bottom: 0; 
+}
+
+.flush--left { 
+  margin-left: 0; 
+}
+
+.flush--ends { 
+  margin-top: 0;
+  margin-bottom: 0; 
+}
+
+.flush--sides { 
+  margin-right: 0; 
+  margin-left: 0; 
+}
+
+@media (min-width: $bp-lap) {
+  .flush--lap { 
+    margin: 0; 
+  }
+
+  .flush-lap--top { 
+    margin-top: 0; 
+  }
+
+  .flush-lap--right { 
+    margin-right: 0; 
+  }
+
+  .flush-lap--bottom { 
+    margin-bottom: 0; 
+  }
+
+  .flush-lap--left { 
+    margin-left: 0; 
+  }
+
+  .flush-lap--ends { 
+    margin-top: 0;
+    margin-bottom: 0; 
+  }
+
+  .flush-lap--sides { 
+    margin-right: 0; 
+    margin-left: 0; 
+  }
+}
+
+@media (min-width: $bp-desk) {
+  .flush--desk { 
+    margin: 0; 
+  }
+
+  .flush-desk--top { 
+    margin-top: 0; 
+  }
+
+  .flush-desk--right { 
+    margin-right: 0; 
+  }
+
+  .flush-desk--bottom { 
+    margin-bottom: 0; 
+  }
+
+  .flush-desk--left { 
+    margin-left: 0; 
+  }
+
+  .flush-desk--ends { 
+    margin-top: 0;
+    margin-bottom: 0; 
+  }
+
+  .flush-desk--sides { 
+    margin-right: 0; 
+    margin-left: 0; 
+  }
+}
+
+} // end if

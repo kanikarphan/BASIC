@@ -1,0 +1,18 @@
+// Name:         Clearfix
+// Description:  Micro clearfix for modern browsers - http://nicolasgallagher.com/micro-clearfix-hack/
+//
+// Components:   `clearfix`
+//
+// Modifier:     
+//
+
+.clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
